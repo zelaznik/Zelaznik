@@ -1,0 +1,25 @@
+	<div id="page-wrapper">
+
+		<% if defined? banner %>
+			<%= render 'header', active: active, banner: banner %>
+		<% else %>
+			<%= render 'header', active: active %>
+		<% end %>
+
+		<!-- Main Wrapper -->
+		<div id="main-wrapper">
+			<div id="main" class="container">
+				<div class="row">
+
+          <%= yield %>
+
+				</div> <!-- End Row 200% -->
+			</div> <!-- End #main.container -->
+		</div> <!-- End #main-wrapper -->
+
+		<!-- Footer Wrapper -->
+		<%= render 'footer' %>
+
+
+
+</div>

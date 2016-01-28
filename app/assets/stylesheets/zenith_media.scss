@@ -1,0 +1,22 @@
+/* Universal */
+@mixin universal() {
+  #copyright span {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 737px) {
+  @include universal();
+}
+
+/* Tablet */
+@media screen and (min-width: 737px) and (max-width: 1200px) {
+  @include universal();
+}
+
+/* Mobile */
+@media screen and (max-width: 736px) {
+  @include universal();
+}

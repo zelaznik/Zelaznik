@@ -1,0 +1,36 @@
+<!-- Header Wrapper -->
+  <div id="header-wrapper">
+    <div class="container">
+
+      <!-- Header -->
+      <div id="header">
+        <div class="inner">
+
+          <!-- Logo -->
+          <h1><%= link_to @current_user.full_name, root_url %></h1>
+
+          <% append_list_item = Proc.new do |name, options = {}| %>
+            <% url = options[:url] || send("#{name.downcase}_path") %>
+            <li class="<%= (active.downcase == name.downcase) ? 'current_page_item' : '' %>">
+              <%= link_to name, url %>
+            </li>
+          <% end %>
+
+          <!-- Nav -->
+          <nav id="nav">
+            <ul>
+              <% ['Home','About','Blog'].each(&append_list_item) %>
+              <% ['Resume'].each(&append_list_item) %>
+              <% ['Portfolio','Contact'].each(&append_list_item) %>
+            </ul>
+          </nav>
+
+        </div> <!-- End Inner -->
+      </div> <!-- End #header, really it's a navbar -->
+
+      <% # The banner is passed in as an optional block %>
+      <%= yield %>
+
+    </div>
+    <div id="header-wrapper-ie8"></div>
+  </div>

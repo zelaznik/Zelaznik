@@ -1,0 +1,95 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/* We're inheriting these z-indices from our css plugin.
+   All new indices must be outside this range.  */
+
+$zMax: 20000;
+$zMin: 1;
+
+$z-layers: (
+  "navbar": $zMax + 144
+);
+
+@function z($layer) {
+  @return map-get($z-layers, $layer);
+}
+
+@function z($layer) {
+  @if not map-has-key($z-layers, $layer) {
+    @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+  }
+
+  @return map-get($z-layers, $layer);
+}
+
+#header-wrapper {
+  z-index: z("navbar");
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+#footer-wrapper {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 60px;
+}
+
+#main-wrapper {
+  position: relative;
+}
+
+body:not(.splash) {
+  #main-wrapper {
+    margin-top: 90px;
+  }
+}
+
+body.splash {
+  background: #32373d;
+
+  &:not(.finished-loading) #main-wrapper {
+    opacity: 0;
+  }
+
+  &.finished-loading #main-wrapper {
+    opacity: 1;
+
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    -o-transition: opacity 400ms ease-in;
+    -ms-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+  }
+
+  #banner {
+    width: 100%;
+    min-height: 650px;
+  }
+
+}
+
+#copyright {
+  color: #dddddd;
+}
+
+#footer-wrapper {
+  &after {
+    background-image: inherit;
+  }
+}
