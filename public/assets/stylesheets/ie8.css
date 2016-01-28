@@ -36,7 +36,7 @@
 
 /* Header */
 
-	#navbar .inner:before {
+	#header .inner:before {
 		background-image: none;
 	}
 

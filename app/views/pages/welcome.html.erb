@@ -1,15 +1,29 @@
 <div class="homepage">
 	<div id="page-wrapper">
 
-		<!-- Footer Wrapper -->
-		<%= render 'footer' do %>
-		<!-- Banner -->
-		<div id="banner">
-			<section>
-				<h2>Software Engineer</h2>
-			</section>
-		</div> <!-- End Banner -->
+		<%= render :layout => '/pages/header', :locals => {active: 'root'} do %>
+			<% #Pass the banner as a block %>
+			<!-- Banner -->
+			<div id="banner">
+				<section>
+					<h2>Software Engineer</h2>
+				</section>
+			</div> <!-- End Banner -->
 		<% end %>
 
+
+		<!-- Footer Wrapper -->
+		<%= render 'footer' %>
+
 	</div>
+
+	<!-- Scripts -->
+		<script src="assets/javascripts/jquery.min.js"></script>
+		<script src="assets/javascripts/jquery.dropotron.min.js"></script>
+		<script src="assets/javascripts/skel.min.js"></script>
+		<script src="assets/javascripts/skel-viewport.min.js"></script>
+		<script src="assets/javascripts/util.js"></script>
+		<!--[if lte IE 8]><script src="assets/javascripts/ie/respond.min.js"></script><![endif]-->
+		<script src="assets/javascripts/main.js"></script>
+
 </div>

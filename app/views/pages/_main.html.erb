@@ -1,6 +1,10 @@
 	<div id="page-wrapper">
 
-    <%= render 'header', active: active %>
+		<% if defined? banner %>
+			<%= render 'header', active: active, banner: banner %>
+		<% else %>
+			<%= render 'header', active: active %>
+		<% end %>
 
 		<!-- Main Wrapper -->
 		<div id="main-wrapper">
