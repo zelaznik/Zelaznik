@@ -25,6 +25,6 @@ class PagesController < ApplicationController
     render :home
   end
 
-  def welcome
+  def splash
   end
 end

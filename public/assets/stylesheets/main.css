@@ -1368,7 +1368,7 @@
 
 /* Wrappers */
 
-	body.root #main-wrapper,
+	body.splash #main-wrapper,
 	#header-wrapper {
 		position: relative;
 		background: url("../../images/banner.jpg") top center;
@@ -1386,7 +1386,7 @@
 			/*background: url("images/bg01.png");*/
 		}
 
-		body.root #main-wrapper:before,
+		body.splash #main-wrapper:before,
 		#header-wrapper:after {
 			background: -moz-linear-gradient(top, rgba(25, 28, 30, 0.75) 5%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 50%), rgba(29, 32, 38, 0.75);
 			background: -webkit-linear-gradient(top, rgba(25, 28, 30, 0.75) 5%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 50%), rgba(29, 32, 38, 0.75);

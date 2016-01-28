@@ -18,9 +18,19 @@
   <body class="<%= action_name %>">
     <script>
       var App = {CURRENT_USER: <%= @current_user.to_json.html_safe %>};
+      App.action_name = "<%= action_name.html_safe %>";
+      App.whenReady = function() {};
     </script>
 
     <%= yield %>
+
+    <script>
+      $(document).ready(function() {
+        setTimeout(function() {
+          $("body").addClass("finished-loading");
+        }, 600);
+      });
+    </script>
 
   </body>
 </html>
