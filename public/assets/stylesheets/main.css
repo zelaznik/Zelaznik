@@ -1608,10 +1608,6 @@
 
 		/* Wrappers */
 
-			#header-wrapper {
-				min-height: 10em;
-			}
-
 			#main-wrapper {
 				padding: 8em 0em;
 			}

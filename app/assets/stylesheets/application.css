@@ -14,8 +14,10 @@
  *= require_self
  */
 
-/*#header-wrapper {
-  position: fixed;
-  display: block;
-  clear: both;
-}*/
+body.welcome {
+  background: #32373d;
+}
+
+#copyright {
+  color: #dddddd;
+}
