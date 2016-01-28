@@ -30,6 +30,7 @@ class PagesController < ApplicationController
     if @splash.nil?
       redirect_to home_url
     else
+      @has_delay = (@splash.rank == 0)
       render
     end
   end

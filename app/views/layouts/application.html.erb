@@ -19,6 +19,7 @@
     <script>
       var App = {CURRENT_USER: <%= @current_user.to_json.html_safe %>};
       App.action_name = "<%= action_name.html_safe %>";
+      App.wait_time = "<%= @has_delay ? 600 : 0 %>";
       App.whenReady = function() {};
     </script>
 
@@ -28,7 +29,7 @@
       $(document).ready(function() {
         setTimeout(function() {
           $("body").addClass("finished-loading");
-        }, 600);
+        }, App.wait_time);
       });
     </script>
 
