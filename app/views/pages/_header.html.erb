@@ -12,7 +12,7 @@
           <% #This proc checks whether the list item is active %>
           <% append_list_item = Proc.new do |name, options = {}| %>
             <% url = options[:url] || send("#{name.downcase}_path") %>
-            <li class="<%= (active=='option') ? 'current_page_item' : '' %>">
+            <li class="<%= (active.downcase == name.downcase) ? 'current_page_item' : '' %>">
               <%= link_to name, url %>
             </li>
           <% end %>
