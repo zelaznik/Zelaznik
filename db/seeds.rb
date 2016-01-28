@@ -16,3 +16,12 @@ user = User.create!(
   github: 'http://www.github.com/zelaznik',
   linkedin: 'http://www.linkedin.com/in/zelaznik'
 )
+
+user.splashes.create! rank: 0,
+p: "Full-stack developer with a passion for", h2: "Ruby On Rails"
+
+user.splashes.create! rank: 1,
+p: "Five years writing financial software in", h2: "Python / PostgreSQL"
+
+user.splashes.create! rank: 2,
+p: "Public radio junkie, swing dancer, the hobbies go on", h2: "Learn More"

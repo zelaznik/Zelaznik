@@ -5,4 +5,5 @@ Rails.application.routes.draw do
     get choice, controller: "pages", action: choice
   end
 
+  get 'next_splash', controller: "pages", action: 'splash'
 end

@@ -26,5 +26,16 @@ class PagesController < ApplicationController
   end
 
   def splash
+    @splash = current_user.splashes.find_by(rank: splash_id)
+    if @splash.nil?
+      redirect_to home_url
+    else
+      render
+    end
+  end
+
+  private
+  def splash_id
+    !params[:prev] ? 0 : params[:prev].to_i + 1
   end
 end
