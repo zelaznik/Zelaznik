@@ -13,8 +13,9 @@
   <!--[if lte IE 9]><link rel="stylesheet" href="assets/stylesheets/ie9.css" /><![endif]-->
 </head>
 <body>
+  <h1>application.html.erb: <%= @current_user ? @current_user.full_name : '#N/A' %></h1>
 
-<%= yield %>
+  <%= yield %>
 
 </body>
 </html>

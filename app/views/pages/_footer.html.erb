@@ -65,21 +65,21 @@
               <ul class="contact">
                 <li>
                   <span class="icon fa-home"></span>
-                    Steve Zelaznik<br />
-                    219 6th St, #2A<br />
-                    San Francisco, CA 94103
+                    <%= @current_user.full_name %><br />
+                    <%= split_lines @current_user.address, by: "<br />" %>
                 </li>
                 <li>
                   <span class="icon fa-envelope"></span>
-                  <%= mail_to 'steve.zelaznik@gmail.com' %>
+                  <%= mail_to @current_user.email %>
                 </li>
                 <li>
                   <span class="icon fa-phone"></span>
-                  (410) 375-8414
+                  <%= @current_user.phone %>
                 </li>
                 <li>
                   <span class="icon fa-twitter"></span>
-                  <a href="#">@stevezelaznik</a>
+                    <%= link_to "@#{@current_user.twitter}",
+                        "http://www.twitter.com/#{@current_user.twitter}" %>
                 </li>
               </ul>
             </section>
@@ -88,9 +88,9 @@
       </div>
 
     <!-- Copyright -->
-      <div id="copyright">
-        <span>&copy; Steve Zelaznik (2015).  All rights reserved.</span>
-      </div>
+    <div id="copyright">
+      <span>&copy; <%= @current_user.full_name %> <%= Time.now.year %>,&nbsp; All rights reserved.</span>
+    </div>
 
           </div>
 </div>
