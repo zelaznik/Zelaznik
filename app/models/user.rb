@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :projects, inverse_of: :user, dependent: :destroy
+
   def full_name
     "#{first_name} #{last_name}"
   end
