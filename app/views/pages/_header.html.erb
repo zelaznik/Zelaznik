@@ -9,7 +9,6 @@
           <!-- Logo -->
           <h1><%= link_to @current_user.full_name, root_url %></h1>
 
-          <% #This proc checks whether the list item is active %>
           <% append_list_item = Proc.new do |name, options = {}| %>
             <% url = options[:url] || send("#{name.downcase}_path") %>
             <li class="<%= (active.downcase == name.downcase) ? 'current_page_item' : '' %>">
@@ -27,7 +26,7 @@
           </nav>
 
         </div> <!-- End Inner -->
-      </div> <!-- End Header -->
+      </div> <!-- End #header, really it's a navbar -->
 
       <% # The banner is passed in as an optional block %>
       <%= yield %>

@@ -1,16 +1,12 @@
 <div class="homepage">
 	<div id="page-wrapper">
 
-		<%= render :layout => '/pages/header', :locals => {active: 'root'} do %>
-			<% #Pass the banner as a block %>
-		<% end %>
+		<%= render :pages %>
 
-		<!-- Banner -->
-		<div id="banner">
-			<section>
-				<h2>Software Engineer</h2>
-			</section>
-		</div> <!-- End Banner -->
+		<div id="splash">
+			<%= banner.call %>
+		</div>
+
 
 		<!-- Footer Wrapper -->
 		<%= render 'footer' %>

@@ -44,11 +44,21 @@ $z-layers: (
 }
 
 #main-wrapper {
-  margin-top: 70px;
+  position: relative;
 }
 
-body.welcome {
-  background: #32373d;
+body:not(.root) {
+  #main-wrapper {
+    margin-top: 90px;
+  }
+}
+
+body.root {
+  background: #474d55;
+  #banner {
+    width: 100%;
+    min-height: 650px;
+  }
 }
 
 #copyright {
