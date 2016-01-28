@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create!(
+user = User.create!(
   first_name: 'Steve', last_name: 'Zelaznik',
   email: 'steve.zelaznik@gmail.com',
   address: "219 6th St #2A\nSan Francisco, CA 94103",
@@ -16,3 +16,5 @@ User.create!(
   github: 'http://www.github.com/zelaznik',
   linkedin: 'http://www.linkedin.com/in/zelaznik'
 )
+
+user.project()

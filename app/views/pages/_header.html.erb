@@ -9,14 +9,37 @@
           <!-- Logo -->
           <h1><%= link_to @current_user.full_name, root_url %></h1>
 
+          <% #This proc checks whether the list item is active %>
+          <% append_list_item = Proc.new do |name, options = {}| %>
+            <% url = options[:url] || send("#{name.downcase}_path") %>
+            <li class="<%= (active=='option') ? 'current_page_item' : '' %>">
+              <%= link_to name, url %>
+            </li>
+          <% end %>
+
+          NavBar.new do |root|
+            root.left do |left|
+              left << @current_user.full_name, link: home_url
+            end
+
+            root.left @current_user.full_name, link: home_url
+            root.right do |
+          end
+          navbar do |root|
+            root.home
+            root.about
+            root.blog
+            root.resume
+
+            end
+          end
+
           <!-- Nav -->
           <nav id="nav">
             <ul>
-              <% ['home','about','blog','resume','portfolio','contact'].each do |option| %>
-                <li class="<%= (active=='option') ? 'current_page_item' : '' %>">
-                  <%= link_to option.capitalize, send("#{option}_path") %>
-                </li>
-              <% end %>
+              <% ['Home','About','Blog'].each(&append_list_item) %>
+              <% ['Resume'].each(&append_list_item) %>
+              <% ['Portfolio','Contact'].each(&append_list_item) %>
             </ul>
           </nav>
 
