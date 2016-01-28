@@ -1368,12 +1368,14 @@
 
 /* Wrappers */
 
+	body.root #main-wrapper,
 	#header-wrapper {
 		position: relative;
 		background: url("../../images/banner.jpg") top center;
 		background-size: cover;
 	}
 
+		body.root #main-wrapper:before,
 		#header-wrapper:before {
 			content: '';
 			display: block;
@@ -1385,6 +1387,7 @@
 			background: url("images/bg01.png");
 		}
 
+		body.root #main-wrapper:after,
 		#header-wrapper:after {
 			background: -moz-linear-gradient(top, rgba(25, 28, 30, 0.75) 5%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 50%), rgba(29, 32, 38, 0.75);
 			background: -webkit-linear-gradient(top, rgba(25, 28, 30, 0.75) 5%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 50%), rgba(29, 32, 38, 0.75);
@@ -1448,6 +1451,7 @@
 
 /* Banner */
 
+	body.root #main-wrapper,
 	#banner {
 		position: relative;
 		overflow: hidden;
@@ -1456,10 +1460,12 @@
 		z-index: 1;
 	}
 
+		body.root #main-wrapper h2,
 		#banner h2 {
 			font-weight: 700;
 		}
 
+	body.root #main-wrapper p,
 		#banner p {
 			font-weight: 300;
 			color: #dadbdd;

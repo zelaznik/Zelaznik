@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: "pages#welcome"
+  root to: "pages#root"
 
   ['home','about','blog','resume','portfolio','contact'].each do |choice|
     get choice, controller: "pages", action: choice

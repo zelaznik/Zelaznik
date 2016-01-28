@@ -47,8 +47,13 @@ $z-layers: (
   margin-top: 70px;
 }
 
-body.welcome {
-  background: #32373d;
+body.root {
+  background: #474d55;
+  // background: url("../../images/banner.jpg") top center;
+  #banner {
+    width: 100%;
+    min-height: 500px;
+  }
 }
 
 #copyright {
