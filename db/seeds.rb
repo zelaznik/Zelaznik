@@ -16,5 +16,3 @@ user = User.create!(
   github: 'http://www.github.com/zelaznik',
   linkedin: 'http://www.linkedin.com/in/zelaznik'
 )
-
-user.project()
