@@ -43,6 +43,13 @@ $z-layers: (
   top: 0;
 }
 
+#footer-wrapper {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 60px;
+}
+
 #main-wrapper {
   position: relative;
 }
