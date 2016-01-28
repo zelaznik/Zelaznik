@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title><%= @current_user.full_name %> - Software Engineer</title>
-  <!-- Load the Zenith template before the individual overrides -->
-  <link rel="stylesheet" href="assets/stylesheets/main.css" />
+  <head>
+    <title><%= @current_user.full_name %> - Software Engineer</title>
+    <!-- Load the Zenith template before the individual overrides -->
+    <link rel="stylesheet" href="assets/stylesheets/main.css" />
 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!--[if lte IE 8]><script src="assets/javascripts/ie/html5shiv.js"></script><![endif]-->
-  <!--[if lte IE 8]><link rel="stylesheet" href="assets/stylesheets/ie8.css" /><![endif]-->
-  <!--[if lte IE 9]><link rel="stylesheet" href="assets/stylesheets/ie9.css" /><![endif]-->
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/javascripts/ie/html5shiv.js"></script><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/stylesheets/ie8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/stylesheets/ie9.css" /><![endif]-->
+  </head>
 
-<body>
-  <script>
-    var App = {CURRENT_USER: <%= @current_user.to_json.html_safe %>};
-  </script>
+  <body>
+    <script>
+      var App = {CURRENT_USER: <%= @current_user.to_json.html_safe %>};
+    </script>
 
-  <%= yield %>
+    <%= yield %>
 
-</body>
+  </body>
 </html>

@@ -1441,7 +1441,7 @@
 
 /* Header */
 
-	#header {
+	#navbar {
 		position: relative;
 		z-index: 2;
 	}
@@ -1623,17 +1623,17 @@
 
 		/* Header */
 
-			#header {
+			#navbar {
 				position: relative;
 			}
 
-				#header .inner {
+				#navbar .inner {
 					position: relative;
 					height: 4.5em;
 					background: #474d55;
 				}
 
-					#header .inner:before {
+					#navbar .inner:before {
 						content: '';
 						position: absolute;
 						top: 0;
@@ -1644,7 +1644,7 @@
 						opacity: .4;
 					}
 
-				#header h1 {
+				#navbar h1 {
 					position: absolute;
 					display: block;
 					margin: 0;
@@ -1655,7 +1655,7 @@
 					color: #FFF;
 				}
 
-					#header h1 a {
+					#navbar h1 a {
 						text-decoration: none;
 						font-weight: 700;
 						color: #FFF;
@@ -2188,7 +2188,7 @@
 
 		/* Header */
 
-			#header, #nav {
+			#navbar, #nav {
 				display: none;
 			}
 

@@ -1,0 +1,28 @@
+	<div id="page-wrapper">
+
+    <%= render 'header', active: active %>
+
+		<!-- Main Wrapper -->
+		<div id="main-wrapper">
+			<div id="main" class="container">
+				<div class="row 200%">
+
+          <%= yield %>
+
+				</div> <!-- End Row 200% -->
+			</div> <!-- End #main.container -->
+		</div> <!-- End #main-wrapper -->
+
+		<!-- Footer Wrapper -->
+		<%= render 'footer' %>
+
+		<!-- Scripts -->
+		<script src="assets/javascripts/jquery.min.js"></script>
+		<script src="assets/javascripts/jquery.dropotron.min.js"></script>
+		<script src="assets/javascripts/skel.min.js"></script>
+		<script src="assets/javascripts/skel-viewport.min.js"></script>
+		<script src="assets/javascripts/util.js"></script>
+		<!--[if lte IE 8]><script src="assets/javascripts/ie/respond.min.js"></script><![endif]-->
+		<script src="assets/javascripts/main.js"></script>
+
+</div>
