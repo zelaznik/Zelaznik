@@ -45,7 +45,12 @@ $z-layers: (
 
 #main-wrapper {
   position: relative;
-  margin-top: 60px;
+}
+
+body:not(.root) {
+  #main-wrapper {
+    margin-top: 90px;
+  }
 }
 
 body.root {
