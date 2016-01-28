@@ -21,7 +21,8 @@ $zMax: 20000;
 $zMin: 1;
 
 $z-layers: (
-  "navbar": $zMax + 144
+  "navbar": $zMax + 144,
+  "ghost": $zMax + 143
 );
 
 @function z($layer) {
@@ -93,4 +94,28 @@ body.splash {
   &after {
     background-image: inherit;
   }
+}
+
+
+#banner > section:not(.active) {
+  display: none;
+  opacity: 0;
+
+  -webkit-transition: opacity 400ms ease-in-out;
+  -moz-transition: opacity 400ms ease-in-out;
+  -o-transition: opacity 400ms ease-in-out;
+  -ms-transition: opacity 400ms ease-in-out;
+  transition: opacity 400ms ease-in-out;
+}
+
+#banner > section.active {
+  display: block;
+  opacity: 1;
+
+  -webkit-transition: opacity 400ms ease-in-out;
+  -moz-transition: opacity 400ms ease-in-out;
+  -o-transition: opacity 400ms ease-in-out;
+  -ms-transition: opacity 400ms ease-in-out;
+  transition: opacity 400ms ease-in-out;
+
 }

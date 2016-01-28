@@ -2,10 +2,36 @@
 
 	<!-- Banner -->
 	<div id="banner">
-		<section>
+		<section class="active" value="0">
 			<p>Full stack developer with a passion for</p>
 			<h2>Ruby On Rails</h2>
+		</section>
+
+		<section value="1">
+			<p>Five years writing software in</p>
+			<h2>Python / PostgreSQL</h2>
+		</section>
+
+		<section value="2">
+			<p>Strong analytical mine in</p>
+			<h2>Math / Data Science</h2>
 		</section>
 	</div>
 
 <% end %>
+
+<script>
+	$(document).ready(function() {
+		var $banner = $ ( '#banner' ) ;
+		var $prevItem, $lastItem;
+
+		$banner.children().each(function(child) {
+			if (!$prevItem) { return; }
+			$prevItem.on('click', function(e) {
+				alert("CLICK");
+				$prevItem.removeClass('active');
+				child.addClass('active');
+			});
+		});
+	});
+</script>
