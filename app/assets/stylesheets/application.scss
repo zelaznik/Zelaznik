@@ -44,15 +44,15 @@ $z-layers: (
 }
 
 #main-wrapper {
-  margin-top: 70px;
+  position: relative;
+  margin-top: 60px;
 }
 
 body.root {
   background: #474d55;
-  // background: url("../../images/banner.jpg") top center;
   #banner {
     width: 100%;
-    min-height: 500px;
+    min-height: 650px;
   }
 }
 
