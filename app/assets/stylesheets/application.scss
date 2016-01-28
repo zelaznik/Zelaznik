@@ -14,6 +14,28 @@
  *= require_self
  */
 
+/* We're inheriting these z-indices from our css plugin.
+   All new indices must be outside this range.  */
+
+$zMax: 20000;
+$zMin: 1;
+
+$z-layers: (
+  "header": $zMax + 144
+);
+
+@function z($layer) {
+  @return map-get($z-layers, $layer);
+}
+
+@function z($layer) {
+  @if not map-has-key($z-layers, $layer) {
+    @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+  }
+
+  @return map-get($z-layers, $layer);
+}
+
 body.welcome {
   background: #32373d;
 }

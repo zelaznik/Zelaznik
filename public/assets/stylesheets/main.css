@@ -1548,7 +1548,7 @@
 				}
 
 			.box.post {
-				margin-top: 5em;
+				margin-bottom: 5em;
 				padding-top: 4em;
 			}
 
@@ -1607,10 +1607,6 @@
 			}
 
 		/* Wrappers */
-
-			#main-wrapper {
-				padding: 8em 0em;
-			}
 
 			.wrapper-style1 {
 				padding: 8em 0em;
@@ -1938,7 +1934,7 @@
 				}
 
 			.box.post {
-				margin-top: 3em;
+				margin-bottom: 3em;
 				padding-top: 2em;
 			}
 
