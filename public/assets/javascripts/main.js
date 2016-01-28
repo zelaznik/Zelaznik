@@ -58,7 +58,7 @@
 				$(
 					'<div id="titleBar">' +
 						'<a href="#navPanel" class="toggle"></a>' +
-						'<span class="title">' + $('#logo').html() + '</span>' +
+						'<span class="title">' + window.App.CURRENT_USER.full_name + '</span>' +
 					'</div>'
 				)
 					.appendTo($body);
