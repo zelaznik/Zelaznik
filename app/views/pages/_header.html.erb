@@ -3,41 +3,44 @@
     <div class="container">
 
       <!-- Header -->
-        <div id="header">
-          <div class="inner">
+      <div id="header">
+        <div class="inner">
 
-            <!-- Logo -->
-              <h1><a href="index.html" id="logo">Steve Zelaznik</a></h1>
+          <!-- Logo -->
+          <h1><a href="index.html" id="logo">Steve Zelaznik</a></h1>
 
-            <!-- Nav -->
-              <nav id="nav">
+          <!-- Nav -->
+          <nav id="nav">
+            <ul>
+              <li class="<%= (active=='root') ? 'current_page_item' : '' %>"><a href="index.html">Homepage</a></li>
+              <li class="<%= (active=='dropdown') ? 'current_page_item' : '' %>">
+                <a href="#">Dropdown</a>
                 <ul>
-                  <li class="<%= (active=='root') ? 'current_page_item' : '' %>"><a href="index.html">Homepage</a></li>
-                  <li class="<%= (active=='dropdown') ? 'current_page_item' : '' %>">
-                    <a href="#">Dropdown</a>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Magna phasellus</a></li>
+                  <li>
+                    <a href="#">Phasellus consequat</a>
                     <ul>
                       <li><a href="#">Lorem ipsum dolor</a></li>
+                      <li><a href="#">Phasellus consequat</a></li>
                       <li><a href="#">Magna phasellus</a></li>
-                      <li>
-                        <a href="#">Phasellus consequat</a>
-                        <ul>
-                          <li><a href="#">Lorem ipsum dolor</a></li>
-                          <li><a href="#">Phasellus consequat</a></li>
-                          <li><a href="#">Magna phasellus</a></li>
-                          <li><a href="#">Etiam dolore nisl</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="#">Veroeros feugiat</a></li>
+                      <li><a href="#">Etiam dolore nisl</a></li>
                     </ul>
                   </li>
-                  <li class="<%= (active=='left_sidebar') ? 'current_page_item' : '' %>"><a href="left-sidebar.html">Left Sidebar</a></li>
-                  <li class="<%= (active=='right_sidebar') ? 'current_page_item' : '' %>"><a href="right-sidebar.html">Right Sidebar</a></li>
-                  <li class="<%= (active=='no_sidebar') ? 'current_page_item' : '' %>"><a href="no-sidebar.html">No Sidebar</a></li>
+                  <li><a href="#">Veroeros feugiat</a></li>
                 </ul>
-              </nav>
+              </li>
+              <li class="<%= (active=='left_sidebar') ? 'current_page_item' : '' %>"><a href="left-sidebar.html">Left Sidebar</a></li>
+              <li class="<%= (active=='right_sidebar') ? 'current_page_item' : '' %>"><a href="right-sidebar.html">Right Sidebar</a></li>
+              <li class="<%= (active=='no_sidebar') ? 'current_page_item' : '' %>"><a href="no-sidebar.html">No Sidebar</a></li>
+            </ul>
+          </nav>
 
-          </div>
-        </div>
+        </div> <!-- End Inner -->
+      </div> <!-- End Header -->
+
+      <% # The banner is passed in as an optional block %>
+      <%= yield %>
 
     </div>
     <div id="header-wrapper-ie8"></div>

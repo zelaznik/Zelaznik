@@ -1,7 +1,15 @@
 <div class="homepage">
 	<div id="page-wrapper">
 
-    <%= render 'header', active: 'root' %>
+		<%= render :layout => '/pages/header', :locals => {active: 'root'} do %>
+			<% #Pass the banner as a block %>
+			<!-- Banner -->
+			<div id="banner">
+				<section>
+					<h2>Software Engineer</h2>
+				</section>
+			</div> <!-- End Banner -->
+		<% end %>
 
 		<!-- Intro Wrapper -->
 			<div class="wrapper wrapper-style2">
