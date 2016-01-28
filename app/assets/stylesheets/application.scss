@@ -21,7 +21,7 @@ $zMax: 20000;
 $zMin: 1;
 
 $z-layers: (
-  "header": $zMax + 144
+  "navbar": $zMax + 144
 );
 
 @function z($layer) {
@@ -34,6 +34,13 @@ $z-layers: (
   }
 
   @return map-get($z-layers, $layer);
+}
+
+#header-wrapper {
+  z-index: z("navbar");
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 body.welcome {
