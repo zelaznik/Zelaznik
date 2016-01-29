@@ -31,11 +31,13 @@ p: "Public radio junkie, swing dancer, the hobbies go on", h2: "Learn More"
 tumblr_url = 'http://zelaznik.tumblr.com/rss'
 feed = Feedjira::Feed.fetch_and_parse tumblr_url
 feed.entries.each do |entry|
-  user.blog_posts.create!(
+  post = user.blog_posts.create!(
     guid: entry.entry_id,
     title: entry.title,
     summary: entry.summary,
     link: entry.entry_id,
     pub_date: entry.published
   )
+  post.created_at = entry.published
+  post.updated_at = entry.published
 end

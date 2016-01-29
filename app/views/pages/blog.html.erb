@@ -5,31 +5,18 @@
 		<div id="sidebar">
 			<section>
 				<header>
-					<h2>Curabitur lorem nisl dolor</h2>
+					<h2>Recent Blog Posts</h2>
 				</header>
 				<ul class="style2">
-					<li class="first">
-						<h3>Aliquam erat volutpat class aptent</h3>
-						<p><span class="date">6 hours ago</span><span class="comments"><a href="#">32 comments</a></span></p>
-					</li>
-					<li>
-						<h3>Taciti sociosqu ad litora torquent conubia</h3>
-						<p><span class="date">9 hours ago</span><span class="comments"><a href="#">28 comments</a></span></p>
-					</li>
-					<li>
-						<h3>Nostra per inceptos himenaeos suspendisse</h3>
-						<p><span class="date">9 hours ago</span><span class="comments"><a href="#">28 comments</a></span></p>
-					</li>
-					<li>
-						<h3>Nostra per inceptos himenaeos suspendisse</h3>
-						<p><span class="date">9 hours ago</span><span class="comments"><a href="#">28 comments</a></span></p>
-					</li>
-					<li>
-						<h3>Quis elementum tempor sed ullamcorper</h3>
-						<p><span class="date">9 hours ago</span><span class="comments"><a href="#">28 comments</a></span></p>
-					</li>
+					<% @current_user.blog_posts.order(pub_date: :desc).limit(5).each do |post| %>
+						<li class="first">
+							<h3><%= post.title %></h3>
+							<p><span class="date"><%= time_ago(post) %></span><span class="comments">
+							<a href="<%= post.guid %>">Read Entire Post</a></span></p>
+						</li>
+					<% end %>
 				</ul>
-				<a href="#" class="button icon icon-folder-open-alt">Browse Archives</a>
+				<%= link_to "Browse Archives", @current_user.blog, class: "button icon icon-folder-open-alt" %>
 			</section>
 		</div>
 	</div>
