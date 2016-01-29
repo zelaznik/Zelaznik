@@ -69,8 +69,6 @@ ActiveRecord::Schema.define(version: 20160129043549) do
   end
 
   add_index "users", ["first_name", "last_name"], name: "index_users_on_first_name_and_last_name", unique: true, using: :btree
-  add_index "users", ["first_name"], name: "index_users_on_first_name", using: :btree
-  add_index "users", ["last_name"], name: "index_users_on_last_name", using: :btree
 
   add_foreign_key "blog_posts", "users"
   add_foreign_key "projects", "users"

@@ -6,6 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+User.all.each { |u| u.destroy! }
+
 user = User.create!(
   first_name: 'Steve', last_name: 'Zelaznik',
   email: 'steve.zelaznik@gmail.com',
@@ -25,20 +27,3 @@ p: "Five years writing financial software in", h2: "Python / PostgreSQL"
 
 user.splashes.create! rank: 2,
 p: "Public radio junkie, swing dancer, the hobbies go on", h2: "Learn More"
-
-
-"""
-  t.integer :user_id
-  t.string :guid
-  t.string :title
-  t.text :description
-  t.string :link
-  t.datetime :pub_date
-"""
-
-tumblr_url = 'http://www.zelaznik.tumblr.com/rss'
-feed = Feedjira::Feed.fetch_and_parse url
-feed.entries.each do |entry|
-  debugger
-  user.blog_posts.create!
-end
