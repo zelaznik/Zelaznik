@@ -15,6 +15,6 @@ class CreateUsers < ActiveRecord::Migration
       t.timestamps null: false
     end
 
-    create_index :users, [:first_name, :last_name], unique: true
+    add_index :users, [:first_name, :last_name], unique: true
   end
 end

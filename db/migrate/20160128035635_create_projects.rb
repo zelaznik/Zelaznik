@@ -10,7 +10,7 @@ class CreateProjects < ActiveRecord::Migration
     end
 
     add_foreign_key :projects, :users, cascade: :delete
-    add_index :projects, :user_id
+    add_index :projects, :users
 
     add_index :users, :first_name
     add_index :users, :last_name

@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :blog_posts, inverse_of: :user, dependent: :destroy
   has_many :projects, inverse_of: :user, dependent: :destroy
   has_many :splashes, inverse_of: :user, dependent: :destroy
 
