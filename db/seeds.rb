@@ -27,3 +27,15 @@ p: "Five years writing financial software in", h2: "Python / PostgreSQL"
 
 user.splashes.create! rank: 2,
 p: "Public radio junkie, swing dancer, the hobbies go on", h2: "Learn More"
+
+tumblr_url = 'http://zelaznik.tumblr.com/rss'
+feed = Feedjira::Feed.fetch_and_parse tumblr_url
+feed.entries.each do |entry|
+  user.blog_posts.create!(
+    guid: entry.entry_id,
+    title: entry.title,
+    summary: entry.summary,
+    link: entry.entry_id,
+    pub_date: entry.published
+  )
+end
