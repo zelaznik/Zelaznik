@@ -1088,13 +1088,13 @@
 	}
 
 	a {
-		color: #46bdd3;
-		text-decoration: underline;
+		/*color: #46bdd3;*/
+		text-decoration: none;
 	}
 
-		a:hover {
-			text-decoration: none;
-		}
+	a:hover {
+		text-decoration: none;
+	}
 
 	section, article {
 		margin-bottom: 3em;
@@ -1679,6 +1679,11 @@
 					padding: 0 1.5em 0 1.5em;
 				}
 
+					#nav > ul > li > a {
+						height: 100%;
+						width: 100%;
+					}
+
 					#nav > ul > li > a, #nav > ul > li > span {
 						text-decoration: none;
 						font-size: 1em;
@@ -1692,7 +1697,7 @@
 					}
 
 					#nav > ul > li:last-child {
-						padding-right: 0;
+						/*padding-right: 0;*/
 					}
 
 					#nav > ul > li > ul {

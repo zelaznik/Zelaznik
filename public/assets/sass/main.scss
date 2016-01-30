@@ -72,7 +72,7 @@
 
 	a {
 		color: #46bdd3;
-		text-decoration: underline;
+		text-decoration: none;
 
 		&:hover {
 			text-decoration: none;
@@ -169,7 +169,6 @@
 			}
 
 			a {
-				color: #9b9fa5;
 
 				&:hover {
 					text-decoration: none;
@@ -180,6 +179,10 @@
 				padding-top: 0em;
 				border-top: none;
 			}
+		}
+
+		ul.style1 a {
+			color: @(ul.style1).color();
 		}
 
 		&.style2 {
