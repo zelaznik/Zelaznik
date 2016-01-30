@@ -50,7 +50,6 @@
 /* Basic */
 
 	body {
-		background: #fff;
 		font-family: 'Open Sans', sans-serif;
 		font-weight: 300;
 		color: #474d55;
@@ -412,7 +411,7 @@
 
 	.wrapper-style1 {
 		overflow: hidden;
-		background: #f7f7f7 url('images/bg01.png');
+		// background: #f7f7f7 url('images/bg01.png');
 		box-shadow: inset 0px 15px 8px -10px rgba(0, 0, 0, 0.03), inset 0px -15px 8px -10px rgba(0, 0, 0, 0.03);
 
 		header {
