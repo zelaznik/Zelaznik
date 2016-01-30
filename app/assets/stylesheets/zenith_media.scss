@@ -5,12 +5,14 @@
 
 /* Universal */
 @mixin universal() {
+
   #copyright span {
     margin-top: 0px;
     margin-bottom: 0px;
   }
 
   #header-wrapper {
+    line-height: 1em;
     display: block;
   }
 
@@ -29,6 +31,7 @@
     h1 {
       background: #46bdd3;
       padding: 1em 1.2em;
+      line-height: 20px;
       font-size: 20px;
 
       a {
