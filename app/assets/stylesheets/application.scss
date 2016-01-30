@@ -21,6 +21,7 @@ $zMax: 20000;
 $zMin: 1;
 
 $z-layers: (
+  "scrollbar": $zMax + 512,
   "navbar": $zMax + 144,
   "ghost": $zMax + 143
 );
@@ -37,6 +38,11 @@ $z-layers: (
   @return map-get($z-layers, $layer);
 }
 
+@mixin center() {
+  margin-right: auto;
+  margin-left: auto;
+}
+
 @mixin vertical-align-center() {
   position: relative;
   top: 50%;
@@ -45,11 +51,15 @@ $z-layers: (
   transform: translateY(-50%);
 }
 
+--webkit::scrollbar {
+  z-index: z("scrollbar");
+}
+
 html, body {
   height: 100%;
 }
 
-$headerHeight: 70px;
+$headerHeight: 60px;
 $footerHeight: 60px;
 
 #page-wrapper {

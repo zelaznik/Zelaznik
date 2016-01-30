@@ -7,7 +7,9 @@
         <div class="inner">
 
           <!-- Logo -->
-          <h1><%= link_to @current_user.full_name, root_url %></h1>
+          <div class="navbar-left">
+            <h1><%= link_to @current_user.full_name, root_url %></h1>
+          </div>
 
           <% item_maker = Proc.new do |name, options={}| %>
             <% url = options[:url] || send("#{name.downcase}_path") %>
@@ -18,13 +20,13 @@
           <% end %>
 
           <!-- Nav -->
-          <nav id="nav">
+          <div id="nav">
             <ul>
               <% ['Home','About','Blog'].each(&item_maker) %>
               <% ['Resume'].each(&item_maker) %>
               <% ['Portfolio','Contact'].each(&item_maker) %>
             </ul>
-          </nav>
+          </div>
 
         </div> <!-- End Inner -->
       </div> <!-- End #header, really it's a navbar -->

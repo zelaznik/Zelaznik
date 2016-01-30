@@ -1,8 +1,64 @@
+@mixin center() {
+  margin-right: auto;
+  margin-left: auto;
+}
+
 /* Universal */
 @mixin universal() {
   #copyright span {
     margin-top: 0px;
     margin-bottom: 0px;
+  }
+
+  #header-wrapper {
+    display: block;
+  }
+
+  .navbar-left {
+    width: 200px;
+  }
+
+  #header {
+    display: block;
+
+    .inner {
+        position: relative;
+        height: 4.5em;
+        background: #474d55;
+    }
+
+    h1 {
+      background: #46bdd3;
+      padding: 1em 1.2em;
+      line-height: 20px;
+      font-size: 20px;
+
+      a {
+        text-decoration: none;
+        font-weight: 700;
+        color: #ffffff;
+      }
+    }
+  }
+
+  #nav {
+    display: inline-block;
+    line-height: 60px;
+    height: 60px;
+
+    > ul > li {
+      display: inline;
+      float: left;
+      padding: 0 1.5em 0 1.5em;
+
+      > a, > span {
+        text-decoration: none;
+        font-size: 14px;
+        border-radius: 6px;
+        outline: 0;
+        color: #FFF;
+      }
+    }
   }
 
   #banner {
@@ -33,10 +89,27 @@
 
 }
 
+/* Everything */
+@include universal();
 
-/* Desktop */
-@media screen and (min-width: 737px) {
+/* Mobile */
+@media screen and (max-width: 736px) {
   @include universal();
+
+  #header h2 {
+    line-height: 15px;
+    font-size: 15px;
+  }
+
+  .navbar-left {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #nav {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 /* Tablet */
@@ -44,7 +117,7 @@
   @include universal();
 }
 
-/* Mobile */
-@media screen and (max-width: 736px) {
+/* Desktop */
+@media screen and (min-width: 737px) {
   @include universal();
 }
