@@ -37,10 +37,19 @@ $z-layers: (
   @return map-get($z-layers, $layer);
 }
 
+@mixin vertical-align-center() {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 html, body {
   height: 100%;
 }
 
+$headerHeight: 70px;
 $footerHeight: 60px;
 
 #page-wrapper {
@@ -68,13 +77,15 @@ $footerHeight: 60px;
   &after {
     background-image: inherit;
   }
-}
 
-#footer-wrapper {
   height: $footerHeight;
   z-index: z("navbar");
   position: relative;
   width: 100%;
+}
+
+#footer {
+  @include vertical-align-center();
 }
 
 body {
