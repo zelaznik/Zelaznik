@@ -11,7 +11,7 @@
   }
 
   #header-wrapper {
-    display: block;
+    display: inline-table;
   }
 
   .navbar-left {
@@ -20,11 +20,12 @@
 
   #header {
     display: block;
+    line-height: 20px;
 
     .inner {
-        position: relative;
-        height: 4.5em;
-        background: #474d55;
+      line-height: 20px;
+      position: relative;
+      background: #474d55;
     }
 
     h1 {
@@ -35,6 +36,7 @@
 
       a {
         text-decoration: none;
+        line-height: 20px;
         font-weight: 700;
         color: #ffffff;
       }
