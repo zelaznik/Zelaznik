@@ -100,7 +100,6 @@ body.splash {
 
   &.finished-loading #main-wrapper {
     opacity: 1;
-    @transition(opacity, 400ms, ease-in);
 
     -webkit-transition: opacity 400ms ease-in;
     -moz-transition: opacity 400ms ease-in;
