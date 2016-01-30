@@ -131,6 +131,11 @@ body {
 #banner {
   width: 100%;
 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+
   a {color: #ffffff;}
 
   > section {

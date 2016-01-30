@@ -8,28 +8,23 @@
 }
 
 #nav {
-  position: relative;
 
-  > li {
+  ul > li {
 
     &.current_page_item {
-      background: #88ff88; /*#46bdd3;*/
+      background: #46bdd3;
     }
 
     &:hover {
       a {
         text-decoration: bold;
       }
-      background: #88ff88; /*#46bdd3;*/
+      background: #46bdd3;
       -webkit-transition: background 50ms ease-out;
       -moz-transition: background 50ms ease-out;
       -o-transition: background 50ms ease-out;
       -ms-transition: background 50ms ease-out;
       transition: background 50ms ease-out;
-    }
-
-    &:hover > {
-      text-decoration: underline;
     }
   }
 }
