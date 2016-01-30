@@ -13,4 +13,8 @@ class User < ActiveRecord::Base
 
     obj.to_json
   end
+
+  def most_recent_blog_post
+    blog_posts.order(pub_date: :desc).first
+  end
 end

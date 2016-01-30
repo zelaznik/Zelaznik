@@ -11,7 +11,7 @@
 					<% @current_user.blog_posts.order(pub_date: :desc).limit(5).each do |post| %>
 						<li class="first">
 							<h3><%= link_to post.title, post.guid, target: '_blank' %></h3>
-							<p><span class="date"><%= time_ago(post) %></span><span class="comments">
+							<p><span class="date"><%= post.pub_date %></span><span class="comments">
 							<%= link_to "Read Entire Post", post.guid, target: '_blank' %></span></p>
 						</li>
 					<% end %>
@@ -25,13 +25,14 @@
 		<!-- Content -->
 		<div id="content">
 			<section class="box post">
+				<% post = @current_user.most_recent_blog_post %>
 				<header>
-					<h2>Left Sidebar</h2>
+					<h2><%= post.title %></h2>
 				</header>
-				<a href="#" class="image left"><%= image_tag("tumblr.jpg", :alt => @current_user.full_name) %></a>
-					<p><strong>Vivamus ut mauris tempus</strong> sodales adipiscing in vel quam. Nam erat a posuere laoreet eget nibh sodales adipiscing in vel dolore. Phasellus vitae tristique dui. Duis arcu tortor, fringilla sed venenatis sed, pharetra ac velit. Sed in volutpat nisl. Mauris vel sagittis diam. Lorem ipsum dolor sit amet, consectetur sed adipiscing elit. Proin gravida orci porttitor enim accumsan lacinia. Donec condimentum, urna non molestie semper, ligula enim ornare nibh, quis laoreet eros quam eget ante. Aliquam libero. </p>
-					<p>Etiam arcu dui, faucibus eget, placerat vel, sodales eget, orci. Donec ornare neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies quis, justo. Donec nonummy magna quis risus. Quisque eleifend. Phasellus tempor vehicula justo. Aliquam lacinia metus ut elit. Suspendisse iaculis mauris nec lorem. Donec leo. Vivamus fermentum nibh in augue. Praesent a lacus at urna congue rutrum. Nulla enim eros, porttitor eu, tempus id, varius non, nibh. Duis enim nulla, luctus eu, dapibus lacinia, venenatis id, quam. Vestibulum imperdiet, magna nec eleifend rutrum, nunc lectus vestibulum velit, euismod lacinia quam nisl id lorem. Quisque erat.  Donec ornare neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies quis, justo.</p>
-					<p>Etiam arcu dui, faucibus eget, placerat vel, sodales eget, orci. Donec ornare neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies quis, justo. Donec nonummy magna quis risus. Quisque eleifend. Phasellus tempor vehicula justo. Aliquam lacinia metus ut elit. Suspendisse iaculis mauris nec lorem. Donec leo. Vivamus fermentum nibh in augue. Praesent a lacus at urna congue rutrum. Nulla enim eros, porttitor eu, tempus id, varius non, nibh. Duis enim nulla, luctus eu, dapibus lacinia, venenatis id, quam. Vestibulum imperdiet, magna nec eleifend rutrum, nunc lectus vestibulum velit, euismod lacinia quam nisl id lorem. Quisque erat.  Donec ornare neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies quis, justo.</p>
+
+				<%= image_tag("tumblr.jpg", :alt => @current_user.full_name) %>
+				<%= post.summary.html_safe %>
+
 			</section>
 		</div>
 	</div>
