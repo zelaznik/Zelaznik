@@ -37,33 +37,14 @@ $z-layers: (
   @return map-get($z-layers, $layer);
 }
 
-#nav > ul {
-  > li {
+html, body {
+  height: 100%;
+}
 
-    &.current_page_item {
-      background: #46bdd3;
-    }
+$footerHeight: 60px;
 
-    &:hover {
-      a {
-        text-decoration: bold;
-      }
-      background: #46bdd3;
-      -webkit-transition: background 50ms ease-out;
-      -moz-transition: background 50ms ease-out;
-      -o-transition: background 50ms ease-out;
-      -ms-transition: background 50ms ease-out;
-      transition: background 50ms ease-out;
-    }
-
-    &:hover > {
-      text-decoration: underline;
-    }
-
-    > a {
-      display: block;
-    }
-  }
+#page-wrapper {
+  min-height: 100%;
 }
 
 #header-wrapper {
@@ -73,50 +54,14 @@ $z-layers: (
   top: 0;
 }
 
-#footer-wrapper {
-  z-index: z("navbar");
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  height: 60px;
-}
-
-#main-wrapper {
+#page-wrapper {
+  margin-bottom: -$footerHeight;
   position: relative;
 }
 
-body:not(.splash) {
-  #main-wrapper {
-    margin-top: 90px;
-  }
-}
-
-body.splash {
-  background: #32373d;
-
-  &:not(.finished-loading) #main-wrapper {
-    opacity: 0;
-  }
-
-  &.finished-loading #main-wrapper {
-    opacity: 1;
-
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    -o-transition: opacity 400ms ease-in;
-    -ms-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
-  }
-
-  #banner {
-    width: 100%;
-    min-height: 650px;
-  }
-
-}
-
-#copyright {
-  color: #dddddd;
+.clear-footer {
+  height: $footerHeight;
+  clear: both;
 }
 
 #footer-wrapper {
@@ -125,10 +70,47 @@ body.splash {
   }
 }
 
-#banner {
-  a {
-    color: #ffffff;
+#footer-wrapper {
+  height: $footerHeight;
+  z-index: z("navbar");
+  position: relative;
+  width: 100%;
+}
+
+body {
+  &:not(.splash) {
+    #main-wrapper {
+      margin-top: 90px;
+    }
   }
+
+  &.splash {
+    background: #32373d;
+
+    &:not(.finished-loading) #banner {
+      opacity: 0;
+    }
+
+    &.finished-loading #banner {
+      opacity: 1;
+
+      -webkit-transition: opacity 400ms ease-in;
+      -moz-transition: opacity 400ms ease-in;
+      -o-transition: opacity 400ms ease-in;
+      -ms-transition: opacity 400ms ease-in;
+      transition: opacity 400ms ease-in;
+    }
+  }
+}
+
+#copyright {
+  color: #dddddd;
+}
+
+#banner {
+  width: 100%;
+
+  a {color: #ffffff;}
 
   > section {
     &:not(.active) {
