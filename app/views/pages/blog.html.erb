@@ -10,9 +10,9 @@
 				<ul class="style2">
 					<% @current_user.blog_posts.order(pub_date: :desc).limit(5).each do |post| %>
 						<li class="first">
-							<h3><%= post.title %></h3>
+							<h3><%= link_to post.title, post.guid, target: '_blank' %></h3>
 							<p><span class="date"><%= time_ago(post) %></span><span class="comments">
-							<a href="<%= post.guid %>">Read Entire Post</a></span></p>
+							<%= link_to "Read Entire Post", post.guid, target: '_blank' %></span></p>
 						</li>
 					<% end %>
 				</ul>
