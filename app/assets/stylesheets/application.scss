@@ -37,6 +37,35 @@ $z-layers: (
   @return map-get($z-layers, $layer);
 }
 
+#nav > ul {
+  > li {
+
+    &.current_page_item {
+      background: #46bdd3;
+    }
+
+    &:hover {
+      a {
+        text-decoration: bold;
+      }
+      background: #46bdd3;
+      -webkit-transition: background 50ms ease-out;
+      -moz-transition: background 50ms ease-out;
+      -o-transition: background 50ms ease-out;
+      -ms-transition: background 50ms ease-out;
+      transition: background 50ms ease-out;
+    }
+
+    &:hover > {
+      text-decoration: underline;
+    }
+
+    > a {
+      display: block;
+    }
+  }
+}
+
 #header-wrapper {
   z-index: z("navbar");
   position: fixed;
@@ -71,6 +100,7 @@ body.splash {
 
   &.finished-loading #main-wrapper {
     opacity: 1;
+    @transition(opacity, 400ms, ease-in);
 
     -webkit-transition: opacity 400ms ease-in;
     -moz-transition: opacity 400ms ease-in;
@@ -96,32 +126,32 @@ body.splash {
   }
 }
 
-
-#banner > section:not(.active) {
-  display: none;
-  opacity: 0;
-
-  -webkit-transition: opacity 400ms ease-in-out;
-  -moz-transition: opacity 400ms ease-in-out;
-  -o-transition: opacity 400ms ease-in-out;
-  -ms-transition: opacity 400ms ease-in-out;
-  transition: opacity 400ms ease-in-out;
-}
-
-#banner > section.active {
-  display: block;
-  opacity: 1;
-
-  -webkit-transition: opacity 400ms ease-in-out;
-  -moz-transition: opacity 400ms ease-in-out;
-  -o-transition: opacity 400ms ease-in-out;
-  -ms-transition: opacity 400ms ease-in-out;
-  transition: opacity 400ms ease-in-out;
-
-}
-
-#select {
+#banner {
   a {
+    color: #ffffff;
+  }
 
+  > section {
+    &:not(.active) {
+      display: none;
+      opacity: 0;
+
+      -webkit-transition: opacity 400ms ease-in-out;
+      -moz-transition: opacity 400ms ease-in-out;
+      -o-transition: opacity 400ms ease-in-out;
+      -ms-transition: opacity 400ms ease-in-out;
+      transition: opacity 400ms ease-in-out;
+    }
+
+    &.active {
+      display: block;
+      opacity: 1;
+
+      -webkit-transition: opacity 400ms ease-in-out;
+      -moz-transition: opacity 400ms ease-in-out;
+      -o-transition: opacity 400ms ease-in-out;
+      -ms-transition: opacity 400ms ease-in-out;
+      transition: opacity 400ms ease-in-out;
+    }
   }
 }
