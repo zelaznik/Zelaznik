@@ -1,13 +1,13 @@
 <% dct = {active: 'splash', splash: @splash} %>
 <%= render :layout => '/pages/main', :locals => dct do %>
 	<!-- Banner -->
-	<div id="banner">
-		<% url = next_splash_path prev: @splash.rank %>
-		<a href="<%= url %>">
+	<% url = next_splash_path prev: @splash.rank %>
+	<a href="<%= url %>">
+			<div id="banner">
 			<section class="active">
 				<p><%= @splash.p %></p>
 				<h2><%= @splash.h2 %></h2>
 			</section>
-		</a>
-	</div>
+		</div>
+	</a>
 <% end %>

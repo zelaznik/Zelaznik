@@ -51,6 +51,18 @@ $z-layers: (
   transform: translateY(-50%);
 }
 
+@mixin expand-to-fill-contents() {
+  overflow: auto;
+
+  :before, :after {
+    display: table;
+    content: '';
+  }
+  :after {
+    clear: both;
+  }
+}
+
 html, body {
   height: 100%;
 }
@@ -97,7 +109,7 @@ $footerHeight: 40px;
 body {
   &:not(.splash) {
     #main-wrapper {
-      margin-top: 90px;
+      margin-top: $headerHeight;
     }
   }
 
@@ -125,6 +137,7 @@ body {
 }
 
 #banner {
+  position: fixed;
   width: 100%;
 
   top: 50%;
