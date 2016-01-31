@@ -35,6 +35,9 @@ class PagesController < ApplicationController
     end
   end
 
+  def orig
+  end
+
   private
   def splash_id
     !params[:prev] ? 0 : params[:prev].to_i + 1
