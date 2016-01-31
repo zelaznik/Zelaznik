@@ -34,9 +34,18 @@
 								<section id="skills-intro">
                   <header class="section-header">
                     <h2 class="section-headline">
-											<span class="word-group">Computer<span> / <span class="word-group">Technical Skills</span>
+											<span class="group">Computer<span> / <span class="group">Technical Skills</span>
 										</h2>
-                    <p class="section-caption">Ipsum lorem dolor sed nullam amet volutpat adipiscing dolore consequat volutpat.</p>
+                    <p class="section-caption">
+											<span class="group">
+												<span class="group">An affinity for</span>
+												<span class="group">scripting languages,</span>
+											</span>
+											<span class="group">
+												<span class="group">SQL databases,</span>
+												<span class="group">and unit-testing frameworks.</span>
+											</span>
+											</p>
                   </header>
 
 									<div class="row">
@@ -45,7 +54,7 @@
 												<div class="3u">
 												  <section>
 												    <%= image_tag skill.image_url, alt: skill.name %>
-												    <h3><%= skill.name %></h3>
+												    <h3 class="section-item-label"><%= skill.name %></h3>
 												  </section>
 												</div><!-- End .3u -->
 										<% end %>
