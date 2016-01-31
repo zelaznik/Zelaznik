@@ -108,7 +108,7 @@ $footerHeight: 60px;
 
 body {
   &:not(.splash) {
-    #main-wrapper {
+    #navbar-offset {
       margin-top: $headerHeight;
     }
   }
@@ -227,6 +227,10 @@ section {
   h2, p {
     line-height: 1em;
   }
+}
+
+.word-group {
+  display: inline-block;
 }
 
 
