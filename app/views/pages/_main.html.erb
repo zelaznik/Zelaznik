@@ -1,23 +1,20 @@
-	<div id="page-wrapper">
+<div id="page-wrapper">
 
-		<% if defined? banner %>
-			<%= render 'header', active: active, banner: banner %>
-		<% else %>
-			<%= render 'header', active: active %>
-		<% end %>
+	<% banner = nil unless defined? banner %>
+	<%= render 'header', active: active, banner: banner %>
 
-		<!-- Main Wrapper -->
-		<div id="main-wrapper">
-			<div id="main" class="container">
-				<div class="row 200%">
+	<!-- Main Wrapper -->
+	<div id="main-wrapper">
+		<div id="main" class="container">
+			<div class="row 200%">
 
-          <%= yield %>
+        <%= yield %>
 
-				</div><!-- End .row.200% -->
-			</div> <!-- End #main.container -->
+			</div><!-- End .row.200% -->
+		</div> <!-- End #main.container -->
 
-			<div class="clear-footer"></div>
-		</div> <!-- End #main-wrapper -->
+		<div class="clear-footer"></div>
+	</div> <!-- End #main-wrapper -->
 
 </div>
 

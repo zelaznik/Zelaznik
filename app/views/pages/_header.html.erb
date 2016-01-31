@@ -27,10 +27,15 @@
             </ul>
           </div>
 
+        <% if (defined? banner) && (! banner.nil?) %>
+      		<div id="banner">
+      			<%= banner.call.html_safe %>
+      		<div>
+        <% end %>
+
         </div> <!-- End Inner -->
       </div> <!-- End #header, really it's a navbar -->
 
-      <% # The banner is passed in as an optional block %>
       <%= yield %>
 
     </div>
