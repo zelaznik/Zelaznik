@@ -3,9 +3,25 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .skills-table {
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+  padding: 0px 30px;
+
   text-align: center;
+  display: grid;
 }
 
 .skills-item {
-  display: inline;
+  width: 140px;
+  height: 130px;
+  padding: 0 15px;
+
+  text-decoration: bold;
+  display: table-cell;
+  margin: 20px 10px;
+
+  display: -webkit-inline-flex; /* Safari */
+  display: inline-flex;
+
 }
