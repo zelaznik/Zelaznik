@@ -27,16 +27,9 @@
             </ul>
           </div>
 
-        <% if (defined? banner) && (! banner.nil?) %>
-      		<div id="banner">
-      			<%= banner.call.html_safe %>
-      		<div>
-        <% end %>
 
         </div> <!-- End Inner -->
       </div> <!-- End #header, really it's a navbar -->
-
-      <%= yield %>
 
     </div>
     <div id="header-wrapper-ie8"></div>
