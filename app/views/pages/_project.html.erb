@@ -1,0 +1,24 @@
+<section class="box post">
+  <header>
+    <h2><%= project.title %></h2>
+  </header>
+
+  <a href="<%= project.live %>" class="image left">
+    <%= image_tag project.image_url, alt: "#{project.title} screen shot" %>
+  </a>
+
+  <%= project.summary.html_safe %>
+
+  <ul class="actions">
+    <% unless project.live.nil? %>
+      <li>
+        <%= link_to "Live Website", project.live, class: "button icon fa-file" %>
+      </li>
+    <% end %>
+    <% unless project.github.nil? %>
+      <li>
+        <%= link_to 'GitHub', project.github, class: "button alt icon fa-comment-alt" %>
+      </li>
+    <% end %>
+  </ul>
+</section>

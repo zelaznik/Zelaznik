@@ -22,6 +22,7 @@
 		</div> <!-- .banner-wrapper -->
 
 		<div id="main" class="container">
+
 				<!-- Intro Wrapper -->
 				<div class="wrapper wrapper-style2">
 					<div class="container">
@@ -65,6 +66,26 @@
 							</div>
 						</div>
 					</div>
+				</div> <!-- end intro wrapper -->
+
+
+				<!-- Content -->
+				<div id="content">
+
+					<div class="row">
+						<div class="12u">
+							<!-- Preview -->
+							<section>
+								<header>
+									<h2>Projects</h2>
+								</header>
+							</section>
+						</div> <!-- End .12u -->
+					</div> <!-- end .row -->
+
+					<% @current_user.projects.limit(4).each do |project| %>
+						<%= render 'project', project: project %>
+					<% end %>
 				</div>
 
 		</div> <!-- End #main.container -->
@@ -72,7 +93,7 @@
 		<div class="clear-footer"></div>
 	</div> <!-- End #main-wrapper -->
 
-</div>
+</div> <!-- end #page-wrapper -->
 
 <!-- Footer Wrapper -->
 <%= render 'footer' %>
