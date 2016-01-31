@@ -1365,14 +1365,7 @@
 			display: none;
 		}
 
-/* Wrappers */
-	/*body.splash #main-wrapper,
-	#header-wrapper {
-		position: relative;
-		background: url("../../images/banner.jpg") top center;
-		background-size: cover;
-	}*/
-
+		/* Wrappers */
 		#header-wrapper:before {
 			content: '';
 			display: block;
