@@ -2,12 +2,24 @@
 <%= render :layout => '/pages/main', :locals => dct do %>
 	<!-- Banner -->
 	<% url = next_splash_path prev: @splash.rank %>
-	<a href="<%= url %>">
-			<div id="banner">
-			<section class="active">
-				<p><%= @splash.p %></p>
-				<h2><%= @splash.h2 %></h2>
-			</section>
-		</div>
-	</a>
+
+	<div id="banner">
+
+		<section class="active splash-section">
+			<p class="splash-contents"><%= @splash.p %></p>
+			<h2 class="splash-contents"><%= @splash.h2 %></h2>
+		</section>
+
+		<ul class="actions actions-centered splash-action" has_delay="<%= !!@has_delay %>">
+			<li class="splash-action-item"><a href="<%= contact_path %>"
+					class="button big icon fa-check-circle-o">Contact</a>
+			</li>
+			<li class="splash-action-item"><a href="<%= url %>"
+				  class="button alt big icon fa-info-circle">Learn More</a>
+			</li>
+		</ul>
+
+	</div>
+
+
 <% end %>

@@ -1,62 +1,75 @@
-<%= render :layout => '/pages/main', :locals => {active: 'home'} do %>
+<div id="page-wrapper">
+	<%= render 'header', active: 'home' %>
 
-	<div id="banner">
-		<section>
-			<h2>Software Engineer</h2>
-			<h2>Lover of Math</h2>
-			<h2>Sporadic Blogger</h2>
+	<!-- Main Wrapper -->
+	<div id="main-wrapper">
 
-			<p>
-				<span>When I&#39;m not working, I&#39;m probably running,</span>
-				<span>solving Sudokus, putting forth an honest effort at swing dancing,</span>
-				<span>or trying to make it big in the local karaoke scene.</span>
-			</p>
-		</section>
-	</div>
+		<div id="banner">
+			<section>
+				<h2>Software Engineer</h2>
+				<h2>Lover of Math</h2>
+				<h2>Sporadic Blogger</h2>
 
-	<!-- Intro Wrapper -->
-	<div class="wrapper wrapper-style2">
-		<div class="container">
-			<div class="row">
-				<div class="12u">
+				<p>
+					<span>When I&#39;m not working, I&#39;m probably running,</span>
+					<span>solving Sudokus, putting forth an honest effort at swing dancing,</span>
+					<span>or trying to make it big in the local karaoke scene.</span>
+				</p>
+			</section>
+		</div>
 
-					<!-- Intro -->
-						<section id="intro">
-							<div class="row">
-								<div class="4u 12u(mobile)">
-									<section class="first">
-										<span class="pennant"><span class="icon fa-cloud-upload"></span></span>
-										<h3>Ipsum Feugiat</h3>
-										<p>Magna sed nullam etiam lorem dolore volutpat adipiscing sed consequat volutpat.</p>
+		<div id="main" class="container">
+				<!-- Intro Wrapper -->
+				<div class="wrapper wrapper-style2">
+					<div class="container">
+						<div class="row">
+							<div class="12u">
+
+								<!-- Intro -->
+									<section id="intro">
+										<div class="row">
+											<div class="4u 12u(mobile)">
+												<section class="first">
+													<span class="pennant"><span class="icon fa-cloud-upload"></span></span>
+													<h3>Ipsum Feugiat</h3>
+													<p>Magna sed nullam etiam lorem dolore volutpat adipiscing sed consequat volutpat.</p>
+												</section>
+											</div>
+
+											<div class="4u 12u(mobile)">
+												<section class="middle">
+													<span class="pennant"><span class="icon fa-retweet"></span></span>
+													<h3>Dolore Tempus</h3>
+													<p>Magna sed nullam etiam lorem dolore volutpat adipiscing sed consequat volutpat.</p>
+												</section>
+											</div>
+
+											<div class="4u 12u(mobile)">
+												<section class="last">
+													<span class="pennant"><span class="icon fa-cog"></span></span>
+													<h3>Sed Consequat</h3>
+													<p>Magna sed nullam etiam lorem dolore volutpat adipiscing sed consequat volutpat.</p>
+												</section>
+											</div>
+
+										</div>
+										<ul class="actions actions-centered">
+											<li><a href="#" class="button big icon fa-check-circle-o">Sign up</a></li>
+											<li><a href="#" class="button alt big icon fa-info-circle">Learn More</a></li>
+										</ul>
 									</section>
-								</div>
-
-								<div class="4u 12u(mobile)">
-									<section class="middle">
-										<span class="pennant"><span class="icon fa-retweet"></span></span>
-										<h3>Dolore Tempus</h3>
-										<p>Magna sed nullam etiam lorem dolore volutpat adipiscing sed consequat volutpat.</p>
-									</section>
-								</div>
-
-								<div class="4u 12u(mobile)">
-									<section class="last">
-										<span class="pennant"><span class="icon fa-cog"></span></span>
-										<h3>Sed Consequat</h3>
-										<p>Magna sed nullam etiam lorem dolore volutpat adipiscing sed consequat volutpat.</p>
-									</section>
-								</div>
 
 							</div>
-							<ul class="actions actions-centered">
-								<li><a href="#" class="button big icon fa-check-circle-o">Sign up</a></li>
-								<li><a href="#" class="button alt big icon fa-info-circle">Learn More</a></li>
-							</ul>
-						</section>
-
+						</div>
+					</div>
 				</div>
-			</div>
-		</div>
-	</div>
 
-<% end %>
+		</div> <!-- End #main.container -->
+
+		<div class="clear-footer"></div>
+	</div> <!-- End #main-wrapper -->
+
+</div>
+
+<!-- Footer Wrapper -->
+<%= render 'footer' %>

@@ -1,40 +1,44 @@
 <%= render :layout => '/pages/main', :locals => {active: 'blog'} do %>
 
-	<div class="4u 12u(mobile)">
-		<!-- Sidebar -->
-		<div id="sidebar">
-			<section>
-				<header>
-					<h2>Recent Blog Posts</h2>
-				</header>
-				<ul class="style2">
-					<% @current_user.blog_posts.order(pub_date: :desc).limit(5).each do |post| %>
-						<li class="first">
-							<h3><%= link_to post.title, post.guid, target: '_blank' %></h3>
-							<p><span class="date"><%= post.pub_date %></span><span class="comments">
-							<%= link_to "Read Entire Post", post.guid, target: '_blank' %></span></p>
-						</li>
-					<% end %>
-				</ul>
-				<%= link_to "Browse Archives", @current_user.blog, class: "button icon icon-folder-open-alt", target: '_blank' %>
-			</section>
+	<div class="row 200%">
+
+		<div class="4u 12u(mobile)">
+			<!-- Sidebar -->
+			<div id="sidebar">
+				<section>
+					<header>
+						<h2>Recent Blog Posts</h2>
+					</header>
+					<ul class="style2">
+						<% @current_user.blog_posts.order(pub_date: :desc).limit(5).each do |post| %>
+							<li class="first">
+								<h3><%= link_to post.title, post.guid, target: '_blank' %></h3>
+								<p><span class="date"><%= post.pub_date %></span><span class="comments">
+								<%= link_to "Read Entire Post", post.guid, target: '_blank' %></span></p>
+							</li>
+						<% end %>
+					</ul>
+					<%= link_to "Browse Archives", @current_user.blog, class: "button icon icon-folder-open-alt", target: '_blank' %>
+				</section>
+			</div>
 		</div>
-	</div>
 
-	<div class="8u 12u(mobile) important(mobile)">
-		<!-- Content -->
-		<div id="content">
-			<section class="box post">
-				<% post = @current_user.most_recent_blog_post %>
-				<header>
-					<h2><%= post.title %></h2>
-				</header>
+		<div class="8u 12u(mobile) important(mobile)">
+			<!-- Content -->
+			<div id="content">
+				<section class="box post">
+					<% post = @current_user.most_recent_blog_post %>
+					<header>
+						<h2><%= post.title %></h2>
+					</header>
 
-				<%= image_tag("tumblr.jpg", :alt => @current_user.full_name) %>
-				<%= post.summary.html_safe %>
+					<%= image_tag("tumblr.jpg", :alt => @current_user.full_name) %>
+					<%= post.summary.html_safe %>
 
-			</section>
+				</section>
+			</div>
 		</div>
-	</div>
+
+	</div><!-- End .row.200% -->
 
 <% end %>
