@@ -3,30 +3,32 @@
 
 	<div class="banner-wrapper">
 		<div id="banner">
-			<section>
-				<h2>
-					<ul>
-						<li>Software Engineer</li>
-						<li>Mathematician</li>
-						<li>Public Radio Reporter</li>
-					</ul>
+			<section id="banner-intro">
+				<h2 class="section-headline">
+					<span class="group">
+						<span class="group">Software Engineer</span>
+					</span>
+					<span class="group">
+						<span class="group">Mathematician</span>
+						<span class="group">Public Radio Reporter</span>
+					</span>
         </h2>
 
-				<p>
-					<span class="group">
+				<p class="section-caption">
+					<span class="group group-secondary">
 						<span class="group">Everything in life has been</span>
 						<span class="group">a different puzzle to solve,</span>
 					</span>
-					<span class="group">
-						<span class="group">Puzzles in math as an actuary,</span>
-						<span class="group">in public policy as a journalist,</span>
+					<span class="group group-secondary">
+						<span class="group">Math puzzles as an actuary,</span>
+						<span class="group">policy ones as a journalist.</span>
 					</span>
+				</p>
 
-					<span class="group">
-						<span class="group">or with sorting algorithms in software.</span>
-					</span>
-
-        </p>
+				<h3 class="section-caption">
+					<span class="group">Software is</span>
+					<span class="group">just the next puzzle.</span>
+				</h3>
 
 			</section>
 		</div> <!-- End #banner -->
@@ -55,21 +57,20 @@
 												<span class="group">scripting languages,</span>
 											</span>
 											<span class="group">
-												<span class="group">SQL databases,</span>
-												<span class="group">and unit-testing frameworks.</span>
+												<span class="group">SQL databases,</span>&nbsp;<span>and</span>
+												<span class="group">unit-testing frameworks.</span>
 											</span>
 											</p>
                   </header>
 
-									<div class="row">
-
+									<div class="skills-table">
 										<% @current_user.skills.each do |skill| %>
-												<div class="3u">
-												  <section>
-												    <%= image_tag skill.image_url, alt: skill.name %>
-												    <h3 class="section-item-label"><%= skill.name %></h3>
-												  </section>
-												</div><!-- End .3u -->
+											<div class="skills-item">
+											  <section>
+											    <%= image_tag skill.image_url, alt: skill.name %>
+											    <h3 class="section-item-label"><%= skill.name %></h3>
+											  </section>
+											</div>
 										<% end %>
 
 									</div> <!-- end .row -->

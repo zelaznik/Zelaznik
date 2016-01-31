@@ -168,6 +168,11 @@ body {
         color: #ffffff;
       }
 
+      p.section-caption {
+        font-size: 22px;
+      }
+
+
       > section {
         &:not(.active) {
           display: none;
@@ -235,6 +240,15 @@ section {
   display: inline-block;
 }
 
+#banner-intro {
+  max-width: 850px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  .section-caption {
+    font-size: 30px;
+  }
+}
 
 #copyright {
   color: #dddddd;
