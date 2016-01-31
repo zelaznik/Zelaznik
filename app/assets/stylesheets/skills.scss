@@ -9,12 +9,17 @@
   padding: 0px 30px;
 
   text-align: center;
-  display: grid;
+  display: table;
+  /* Then we define how is distributed the remaining space */
+  justify-content: space-around;
 }
 
 .skills-item {
-  width: 140px;
-  height: 130px;
+  img {
+    height: 80px;
+    width: 80px;
+  }
+
   padding: 0 5px;
 
   text-decoration: bold;
