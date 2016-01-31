@@ -196,7 +196,34 @@ body {
 body.home {
   #banner {
     width:100%;
-    background-image: url('/assets/banner_background.jpg');
+    background-image: url('/assets/banner_orig.jpg') top center;
+    background-size: cover;
+    position: relative;
+
+    &:after {
+      content: '';
+    }
+  }
+}
+
+ul.banner-list {
+  text-align : center;
+
+  > li {
+    display: inline-block;
+    white-space: nowrap;
+    &:after {
+      content: " \00b7";
+    }
+    &.nobullet:after {
+      content: none;
+    }
+  }
+}
+
+section {
+  h2, p {
+    line-height: 1em;
   }
 }
 
