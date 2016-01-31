@@ -21,10 +21,12 @@
     width: 200px;
   }
 
-  #intro > header > h2.section-headline {
-    font-size: 35px;
-    letter-spacing: -1px;
-    font-weight: 700;
+  #skills-intro, #projects-intro {
+    > header > h2.section-headline {
+      font-size: 35px;
+      letter-spacing: -1px;
+      font-weight: 700;
+    }
   }
 
   h2, h3, h4, h5, h6 {
