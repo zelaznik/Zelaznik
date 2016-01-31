@@ -22,10 +22,16 @@
   }
 
   #skills-intro, #projects-intro {
-    > header > h2.section-headline {
+    .section-headline {
       font-size: 35px;
-      letter-spacing: -1px;
-      font-weight: 700;
+    }
+
+    .section-caption, .section-item-label {
+      font-size: 26px;
+    }
+
+    .steve {
+      text-align: center;
     }
   }
 
