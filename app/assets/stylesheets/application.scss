@@ -210,7 +210,7 @@ ul.banner-list {
   text-align : center;
 
   > li {
-    display: inline-block;
+    display: inline;
     white-space: nowrap;
     &:after {
       content: " \00b7";
