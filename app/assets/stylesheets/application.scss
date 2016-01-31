@@ -91,11 +91,6 @@ $footerHeight: 60px;
   clear: both;
 }
 
-body {
-  // background-image: url('/assets/bridge-at-night.jpg');
-  // background-size: cover;
-}
-
 #footer-wrapper {
   &after {
     background-image: inherit;
@@ -115,29 +110,53 @@ body {
   &:not(.splash) {
     #main-wrapper {
       margin-top: $headerHeight;
-
-      // background-image: url('/images/light_bulb_gradient.jpg');
-      // background-repeat: no-repeat;
-      // background-size: 100% auto;
     }
   }
 
   &.splash {
     background: #32373d;
 
-    &:not(.finished-loading) #banner {
+    .splash-section {
+      min-height: 120px;
+      clear: both;
+    }
+
+    &:not(.finished-loading) .splash-contents {
       opacity: 0;
     }
 
-    &.finished-loading #banner {
-      opacity: 1;
-
-      -webkit-transition: opacity 400ms ease-in;
-      -moz-transition: opacity 400ms ease-in;
-      -o-transition: opacity 400ms ease-in;
-      -ms-transition: opacity 400ms ease-in;
-      transition: opacity 400ms ease-in;
+    &:not(.finished-loading) [has_delay=true] {
+      opacity: 0;
+      -webkit-transition: opacity 650ms ease-in-out;
+      -moz-transition: opacity 650ms ease-in-out;
+      -o-transition: opacity 650ms ease-in-out;
+      -ms-transition: opacity 650ms ease-in-out;
+      transition: opacity 650ms ease-in-out;
     }
+
+    &.finished-loading {
+      .splash-action {
+        opacity: 0.40;
+        :hover {
+          opacity: 1;
+          -webkit-transition: opacity 200ms ease-in-out;
+          -moz-transition: opacity 200ms ease-in-out;
+          -o-transition: opacity 200ms ease-in-out;
+          -ms-transition: opacity 200ms ease-in-out;
+          transition: opacity 200ms ease-in-out;
+        }
+      }
+
+      .splash-contents {
+          opacity: 1;
+
+          -webkit-transition: opacity 650ms ease-in;
+          -moz-transition: opacity 650ms ease-in;
+          -o-transition: opacity 650ms ease-in;
+          -ms-transition: opacity 650ms ease-in;
+          transition: opacity 650ms ease-in;
+        }
+      }
 
     #banner {
       position: fixed;
@@ -176,6 +195,15 @@ body {
     }
   }
 }
+
+body.home {
+  #banner {
+    width:100%;
+    background-image: url('/assets/banner_background.jpg');
+  }
+
+}
+
 
 #copyright {
   color: #dddddd;
