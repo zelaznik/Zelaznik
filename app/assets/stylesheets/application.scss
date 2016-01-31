@@ -196,7 +196,7 @@ body {
 body.home {
   #banner {
     width:100%;
-    background-image: url('/assets/banner_orig.jpg') top center;
+    background-image: url(asset-path('banner_orig.jpg')) top center;
     background-size: cover;
     position: relative;
 
