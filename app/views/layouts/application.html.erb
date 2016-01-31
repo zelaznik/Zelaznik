@@ -29,6 +29,7 @@
       $(document).ready(function() {
         setTimeout(function() {
           $("body").addClass("finished-loading");
+          $("[has_delay='true']").removeAttr('has_delay');
         }, App.wait_time);
       });
     </script>
