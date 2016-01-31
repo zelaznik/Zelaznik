@@ -92,8 +92,8 @@ $footerHeight: 60px;
 }
 
 body {
-  background-image: url('/assets/bridge-at-night.jpg');
-  background-size: cover;
+  // background-image: url('/assets/bridge-at-night.jpg');
+  // background-size: cover;
 }
 
 #footer-wrapper {
@@ -116,9 +116,9 @@ body {
     #main-wrapper {
       margin-top: $headerHeight;
 
-      background-image: url('/images/light_bulb_gradient.jpg');
-      background-repeat: no-repeat;
-      background-size: 100% auto;
+      // background-image: url('/images/light_bulb_gradient.jpg');
+      // background-repeat: no-repeat;
+      // background-size: 100% auto;
     }
   }
 
