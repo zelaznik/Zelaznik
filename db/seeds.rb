@@ -7,18 +7,18 @@ steve = User.create!(
 )
 
 Skill.create!([
-  {user: steve, name: 'Python', image_url: "python.jpg"},
-  {user: steve, name: 'SciPy', image_url: "scipy.jpg"},
-  {user: steve, name: 'Ruby', image_url: "ruby.jpg"},
-  {user: steve, name: 'Rails', image_url: "rails.jpg"},
-  {user: steve, name: 'Git', image_url: "git.jpg"},
-  {user: steve, name: 'rSpec', image_url: "rSpec.jpg"},
-  {user: steve, name: 'JavaScript', image_url: "javascript.jpg"},
-  {user: steve, name: 'Backbone', image_url: "backbone.jpg"},
-  {user: steve, name: 'jQuery', image_url: "jquery.jpg"},
-  {user: steve, name: 'sqlite3', image_url: "sqlite3.jpg"},
-  {user: steve, name: 'PostgreSQL', image_url: "postgresql.jpg"},
-  {user: steve, name: 'CSS3', image_url: "css.jpg"}
+  {user: steve, name: 'Python', image_url: 'python.jpg'},
+  {user: steve, name: 'SciPy', image_url: 'scipy.jpg'},
+  {user: steve, name: 'Ruby', image_url: 'ruby.jpg'},
+  {user: steve, name: 'Rails', image_url: 'rails.jpg'},
+  {user: steve, name: 'rSpec', image_url: 'rspec.jpg'},
+  {user: steve, name: 'Git', image_url: 'git.jpg'},
+  {user: steve, name: 'JavaScript', image_url: 'javascript.jpg'},
+  {user: steve, name: 'Backbone', image_url: 'backbone.jpg'},
+  {user: steve, name: 'jQuery', image_url: 'jquery.jpg'},
+  {user: steve, name: 'sqlite3', image_url: 'sqlite3.jpg'},
+  {user: steve, name: 'PostgreSQL', image_url: 'postgresql.jpg'},
+  {user: steve, name: 'CSS3', image_url: 'css.jpg'}
 ])
 
 BlogPost.create!([
