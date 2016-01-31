@@ -30,40 +30,22 @@
 							<div class="12u">
 
 								<!-- Intro -->
-									<section id="intro">
-										<div class="row">
-											<div class="4u 12u(mobile)">
-												<section class="first">
-													<span class="pennant"><span class="icon fa-cloud-upload"></span></span>
-													<h3>Ipsum Feugiat</h3>
-													<p>Magna sed nullam etiam lorem dolore volutpat adipiscing sed consequat volutpat.</p>
-												</section>
-											</div>
+								<section id="intro">
+									<div class="row">
 
-											<div class="4u 12u(mobile)">
-												<section class="middle">
-													<span class="pennant"><span class="icon fa-retweet"></span></span>
-													<h3>Dolore Tempus</h3>
-													<p>Magna sed nullam etiam lorem dolore volutpat adipiscing sed consequat volutpat.</p>
-												</section>
-											</div>
+										<% @current_user.skills.each do |skill| %>
+												<div class="3u">
+												  <section>
+												    <%= image_tag skill.image_url, alt: skill.name %>
+												    <h3><%= skill.name %></h3>
+												  </section>
+												</div><!-- End .3u -->
+										<% end %>
 
-											<div class="4u 12u(mobile)">
-												<section class="last">
-													<span class="pennant"><span class="icon fa-cog"></span></span>
-													<h3>Sed Consequat</h3>
-													<p>Magna sed nullam etiam lorem dolore volutpat adipiscing sed consequat volutpat.</p>
-												</section>
-											</div>
+									</div> <!-- end .row -->
+								</section> <!-- end #intro -->
 
-										</div>
-										<ul class="actions actions-centered">
-											<li><a href="#" class="button big icon fa-check-circle-o">Sign up</a></li>
-											<li><a href="#" class="button alt big icon fa-info-circle">Learn More</a></li>
-										</ul>
-									</section>
-
-							</div>
+							</div> <!-- End .12u -->
 						</div>
 					</div>
 				</div> <!-- end intro wrapper -->
