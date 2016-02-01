@@ -1899,13 +1899,6 @@
 	}
 
 	@media screen and (max-width: 736px) {
-
-		/* Basic */
-
-			html, body {
-				overflow-x: hidden;
-			}
-
 			body, input, textarea, select {
 				font-size: 10pt;
 				line-height: 1.75em;
