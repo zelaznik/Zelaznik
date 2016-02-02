@@ -12,21 +12,22 @@
           </div>
 
           <% item_maker = Proc.new do |name, options={}| %>
-            <% url = options[:url] || send("#{name.downcase}_path") %>
+
             <% flag = (active.downcase == name.downcase) %>
-            <li class="<%= flag ? 'current_page_item': '' %>">
+            <% url = options[:url] || send("#{name.downcase}_path") %>
+            <li class="navbar-list-item <%= flag ? 'current_page_item': '' %>">
               <%= link_to name, url %>
             </li>
+
           <% end %>
 
           <!-- Nav -->
           <div id="nav">
-            <ul>
-              <% ['Home','About','Blog'].each(&item_maker) %>
-              <% ['Resume','Portfolio','Contact'].each(&item_maker) %>
+            <ul class="navbar-list">
+              <% ['Home','About','Blog'].each &item_maker %>
+              <% ['Resume','Portfolio','Contact'].each &item_maker %>
             </ul>
           </div>
-
 
         </div> <!-- End Inner -->
       </div> <!-- End #header, really it's a navbar -->
