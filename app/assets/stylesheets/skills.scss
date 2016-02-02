@@ -8,25 +8,38 @@
   transform: translateX(-50%);
   padding: 0px 30px;
 
-  text-align: center;
-  display: table;
-  /* Then we define how is distributed the remaining space */
-  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  align-content: flex-start;
+
+  // .skills-item:nth-child(even) {
+  //   background: red;
+  // }
+  // .skills-item:nth-child(odd) {
+  //   background: green;
+  // }
 }
 
 .skills-item {
-  img {
-    height: 80px;
-    width: 80px;
-  }
-
   padding: 0 5px;
-
   text-decoration: bold;
-  display: table-cell;
-  margin: 20px 10px;
+  text-align: center;
+  display: inline-block;
 
-  display: -webkit-inline-flex; /* Safari */
-  display: inline-flex;
+  flex: 0 0 150px; /* fixed width */
+}
 
+.skills-item-image {
+  display:block;
+  clear: both;
+  height: 80px;
+  width: 80px;
+
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
 }

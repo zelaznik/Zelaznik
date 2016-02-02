@@ -68,13 +68,10 @@
 									<div class="skills-table">
 										<% @current_user.skills.each do |skill| %>
 											<div class="skills-item">
-											  <section>
-											    <%= image_tag skill.image_url, alt: skill.name %>
-											    <h3 class="section-item-label"><%= skill.name %></h3>
-											  </section>
+										    <%= image_tag skill.image_url, class: 'skills-item-image', alt: skill.name %>
+										    <h3 class="section-item-label"><%= skill.name %></h3>
 											</div>
 										<% end %>
-
 									</div> <!-- end .row -->
 								</section> <!-- end #intro -->
 
@@ -104,70 +101,27 @@
 										</header>
 
 											<div class="row">
-												<div class="4u 12u(mobile)">
-													<section class="box featured-post">
-														<a href="#" class="image full"><img src="images/pic02.jpg" alt=""></a>
-														<div class="content">
-															<h3>Dolore Tempus</h3>
-															<p>Felis orci imperdiet lacus, sed pretium justo dolor eros congue velit. Proin tellus lorem, vestibulum sed volutpat quis, adipiscing auctor sapien curabitur.</p>
-															<a href="#" class="button icon fa-info-sign">Learn More</a>
-														</div>
-													</section>
-												</div>
-												<div class="4u 12u(mobile)">
-													<section class="box featured-post">
-														<a href="#" class="image full"><img src="images/pic03.jpg" alt=""></a>
-														<div class="content">
-															<h3>Dolore Tempus</h3>
-															<p>Felis orci imperdiet lacus, sed pretium justo dolor eros congue velit. Proin tellus lorem, vestibulum sed volutpat quis, adipiscing auctor sapien curabitur.</p>
-															<a href="#" class="button icon fa-info-sign">Learn More</a>
-														</div>
-													</section>
-												</div>
-												<div class="4u 12u(mobile)">
-													<section class="box featured-post">
-														<a href="#" class="image full"><img src="images/pic04.jpg" alt=""></a>
-														<div class="content">
-															<h3>Dolore Tempus</h3>
-															<p>Felis orci imperdiet lacus, sed pretium justo dolor eros congue velit. Proin tellus lorem, vestibulum sed volutpat quis, adipiscing auctor sapien curabitur.</p>
-															<a href="#" class="button icon fa-info-sign">Learn More</a>
-														</div>
-													</section>
-												</div>
-											</div>
 
-											<div class="row">
-												<div class="4u 12u(mobile)">
-													<section class="box featured-post">
-														<a href="#" class="image full"><img src="images/pic05.jpg" alt=""></a>
-														<div class="content">
-															<h3>Dolore Tempus</h3>
-															<p>Felis orci imperdiet lacus, sed pretium justo dolor eros congue velit. Proin tellus lorem, vestibulum sed volutpat quis, adipiscing auctor sapien curabitur.</p>
-															<a href="#" class="button icon fa-info-sign">Learn More</a>
-														</div>
-													</section>
-												</div>
-												<div class="4u 12u(mobile)">
-													<section class="box featured-post">
-														<a href="#" class="image full"><img src="images/pic06.jpg" alt=""></a>
-														<div class="content">
-															<h3>Dolore Tempus</h3>
-															<p>Felis orci imperdiet lacus, sed pretium justo dolor eros congue velit. Proin tellus lorem, vestibulum sed volutpat quis, adipiscing auctor sapien curabitur.</p>
-															<a href="#" class="button icon fa-info-sign">Learn More</a>
-														</div>
-													</section>
-												</div>
-												<div class="4u 12u(mobile)">
-													<section class="box featured-post">
-														<a href="#" class="image full"><img src="images/pic07.jpg" alt=""></a>
-														<div class="content">
-															<h3>Dolore Tempus</h3>
-															<p>Felis orci imperdiet lacus, sed pretium justo dolor eros congue velit. Proin tellus lorem, vestibulum sed volutpat quis, adipiscing auctor sapien curabitur.</p>
-															<a href="#" class="button icon fa-info-sign">Learn More</a>
-														</div>
-													</section>
-												</div>
-											</div>
+												<% @current_user.projects.limit(4).each do |project| %>
+													<% #render 'project', project: project %>
+
+													<div class="4u 12u(mobile)">
+														<section class="box featured-post">
+															<a href="#" class="image full">
+																<%= image_tag project.image_url, alt: "#{project.title} screenshot" %> ">
+															</a>
+															<div class="content">
+																<h3><%= project.title %></h3>
+																<p><%= project.summary.html_safe %></p>
+																<a href="#" class="button icon fa-info-sign">Learn More</a>
+															</div>
+														</section>
+													</div><!-- end column -->
+
+												<% end %>
+
+											</div> <!-- end .row -->
+
 										</section>
 
 									</div>
@@ -192,9 +146,6 @@
 						</div> <!-- End .12u -->
 					</div> <!-- end .row -->
 
-					<% @current_user.projects.limit(4).each do |project| %>
-						<%= render 'project', project: project %>
-					<% end %>
 				</div>
 
 		</div> <!-- End #main.container -->
