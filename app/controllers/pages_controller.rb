@@ -6,7 +6,7 @@ class PagesController < ApplicationController
   end
 
   def blog
-    # redirect_to @current_user.blog, target: '_blank'
+    redirect_to @current_user.blog, target: '_blank'
   end
 
   def resume
