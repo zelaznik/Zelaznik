@@ -230,6 +230,12 @@ ul.banner-list {
   }
 }
 
+ul.contact {
+  > li {
+    font-weight: bold;
+  }
+}
+
 section {
   position: relative;
 
