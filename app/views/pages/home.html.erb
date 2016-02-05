@@ -103,12 +103,13 @@
 											<div class="row">
 
 												<% @current_user.projects.limit(4).each do |project| %>
-													<% #render 'project', project: project %>
+													<%= render 'project', project: project %>
+													<% next %>
 
 													<div class="4u 12u(mobile)">
 														<section class="box featured-post">
 															<a href="#" class="image full">
-																<%= image_tag project.image_url, alt: "#{project.title} screenshot" %> ">
+																<%= image_tag project.image_url, alt: "#{project.title} screenshot" %>
 															</a>
 															<div class="content">
 																<h3><%= project.title %></h3>
