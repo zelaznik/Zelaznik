@@ -64,6 +64,7 @@ $z-layers: (
 }
 
 html, body {
+  min-width: 550px;
   height: 100%;
 }
 
@@ -80,14 +81,6 @@ $footerHeight: 60px;
   position: fixed;
   width: 100%;
   top: 0;
-}
-
-#main-wrapper,
-#header-wrapper .inner {
-  // max-width: 1000px;
-  // position: relative;
-  // left: 50%;
-  // transform: translateX(-50%);
 }
 
 #navbar-offset {

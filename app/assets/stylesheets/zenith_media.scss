@@ -30,11 +30,17 @@
     width: 200px;
   }
 
+  #content section.post {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 0;
+  }
+
   #content, #skills-intro, #projects-intro, #contact-intro {
     .section-headline {
+      text-align: center;
       font-size: 36px;
     }
-
 
     .section-caption, .section-item-label {
       line-height: 1.3em;
