@@ -31,8 +31,8 @@
   }
 
   #content section.post {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 0px;
+    margin-bottom: 40px;
     padding-bottom: 0;
   }
 
@@ -217,6 +217,11 @@
     margin: 0 15px;
   }
 
+  .mobile-line-break {
+    display: inline;
+    margin-bottom: 0.25em;
+  }
+
 }
 
 /* Everything */
@@ -225,6 +230,11 @@
 /* Mobile */
 @media screen and (max-width: 736px) {
   @include universal();
+
+  .mobile-line-break {
+    display: block;
+    clear: both;
+  }
 
   #main .image.left {
       float: none;
