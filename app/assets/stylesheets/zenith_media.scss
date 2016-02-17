@@ -83,11 +83,15 @@
 
   #header {
     display: block;
+    background: #474d55;
 
     .inner {
+      max-width: 1000px;
       line-height: 0;
+
+      left: 50%;
       position: relative;
-      // background: #474d55;
+      transform: translateX(-50%);
     }
 
     h1 {
@@ -150,6 +154,7 @@
   }
 
   #main {
+    max-width: 1000px;
     padding: 20px;
   }
 
