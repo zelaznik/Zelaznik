@@ -69,7 +69,7 @@
 										<% @current_user.skills.each do |skill| %>
 											<div class="skills-item">
 										    <%= image_tag skill.image_url, class: 'skills-item-image', alt: skill.name %>
-										    <h3 class="section-item-label"><%= skill.name %></h3>
+										    <h3 class="section-item-label skills-item-label"><%= skill.name %></h3>
 											</div>
 										<% end %>
 									</div> <!-- end .row -->
