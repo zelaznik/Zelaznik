@@ -82,6 +82,14 @@ $footerHeight: 60px;
   top: 0;
 }
 
+#main-wrapper,
+#header-wrapper .inner {
+  // max-width: 1000px;
+  // position: relative;
+  // left: 50%;
+  // transform: translateX(-50%);
+}
+
 #navbar-offset {
   position: absolute;
 }
@@ -269,4 +277,21 @@ section {
 .wrapper.wrapper-style1 {
   padding-right: 2em;
   padding-left: 2em;
+}
+
+.action-item {
+  * {
+    font-weight: bold;
+  }
+
+  a, a:visited {
+    color: #0000FF;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+h2.section-heading {
+  margin-bottom: 0.25em;
 }

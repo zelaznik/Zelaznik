@@ -1,24 +1,29 @@
-<section class="box post">
+<section class="box post project-item">
   <header class="section-header">
     <h2 class="section-heading"><%= project.title %></h2>
+
+      <% unless project.live.nil? %>
+        <span class="action-item">
+          <a href="<%= project.live %>" target="_blank">Live</a>
+        </span>
+      <% end %>
+      <% if project.github && project.live %>
+        <%= 'x' %>
+      <% end %>
+      <% unless project.github.nil? %>
+        <span class="action-item">
+          <a href="<%= project.github %>" target="_blank">GitHub</a>
+        </span>
+      <% end %>
+    </span>
   </header>
 
   <a href="<%= project.live || project.github %>" class="image left">
     <%= image_tag project.image_url, alt: "#{project.title} screen shot" %>
   </a>
 
-  <%= project.summary.html_safe %>
+  <span class="section-content">
+    <%= project.summary.html_safe %>
+  </span>
 
-  <ul class="actions">
-    <% unless project.live.nil? %>
-      <li>
-        <%= link_to "Live Website", project.live, class: "button icon fa-file" %>
-      </li>
-    <% end %>
-    <% unless project.github.nil? %>
-      <li>
-        <%= link_to 'GitHub', project.github, class: "button alt icon fa-comment-alt" %>
-      </li>
-    <% end %>
-  </ul>
 </section>
