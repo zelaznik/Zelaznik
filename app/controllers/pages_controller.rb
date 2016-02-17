@@ -6,7 +6,7 @@ class PagesController < ApplicationController
   end
 
   def blog
-    redirect_to @current_user.blog, target: '_blank'
+    raise NotImplementedError.new("Blog routes not in commission.")
   end
 
   def resume
@@ -19,8 +19,6 @@ class PagesController < ApplicationController
   end
 
   def contact
-    # redirect_to url_for controller: 'pages', action: 'home',
-    # anchor: 'contact-intro', only_path: true
   end
 
   def index
