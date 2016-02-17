@@ -51,8 +51,18 @@
   }
 
   #skills-intro {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
     margin-bottom: 20px;
     max-width: 800px;
+
+    > * {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
 
     .section-item-label {
       font-size: 1.2em;
