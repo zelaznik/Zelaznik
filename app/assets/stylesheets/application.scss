@@ -64,6 +64,7 @@ $z-layers: (
 }
 
 html, body {
+  background: #d0d0d0;
   min-width: 550px;
   height: 100%;
 }
@@ -203,7 +204,6 @@ body {
 }
 
 body.home {
-  background: #474d55;
 
   #main {
     background: #ffffff;
