@@ -1,0 +1,38 @@
+<!-- Intro Wrapper -->
+<div class="wrapper wrapper-style2">
+  <div class="container">
+    <div class="row">
+      <div class="12u">
+
+        <!-- Intro -->
+        <section id="skills-intro">
+          <header class="section-header">
+            <h2 class="section-headline">
+              <span class="group">Computer<span> / <span class="group">Technical Skills</span>
+            </h2>
+            <p class="section-caption">
+              <span class="group">
+                <span class="group">An affinity for</span>
+                <span class="group">scripting languages,</span>
+              </span>
+              <span class="group">
+                <span class="group">SQL databases,</span>&nbsp;<span>and</span>
+                <span class="group">unit-testing frameworks.</span>
+              </span>
+              </p>
+          </header>
+
+          <div class="skills-table">
+            <% @current_user.skills.each do |skill| %>
+              <div class="skills-item">
+                <%= image_tag skill.image_url, class: 'skills-item-image', alt: skill.name %>
+                <h3 class="section-item-label skills-item-label"><%= skill.name %></h3>
+              </div>
+            <% end %>
+          </div> <!-- end .row -->
+        </section> <!-- end #intro -->
+
+      </div> <!-- End .12u -->
+    </div>
+  </div>
+</div> <!-- end intro wrapper -->

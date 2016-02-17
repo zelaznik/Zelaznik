@@ -34,6 +34,20 @@
     margin-top: 0px;
     margin-bottom: 40px;
     padding-bottom: 0;
+
+    overflow: visible;
+		background: #f7f7f7 url('images/bg01.png');
+		box-shadow: inset 0px 15px 8px -10px rgba(0, 0, 0, 0.03), inset 0px -15px 8px -10px rgba(0, 0, 0, 0.03);
+
+		header {
+			text-align: center;
+		}
+
+		h3 {
+			font-weight: 700;
+			color: #474d55;
+		}
+
   }
 
   #content, #skills-intro, #projects-intro, #contact-intro {

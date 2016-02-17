@@ -21,7 +21,7 @@
           <% end %>
 
           <% menu_maker = Proc.new do %>
-            <% ['Home','About'].each &item_maker %>
+            <% ['Home'].each &item_maker %>
             <% item_maker.call 'Blog', url: @current_user.blog, target: '_blank' %>
             <% ['Resume','Portfolio','Contact'].each &item_maker %>
           <% end %>
