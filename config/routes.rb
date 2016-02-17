@@ -7,11 +7,7 @@ Rails.application.routes.draw do
     get choice, controller: "pages", action: choice
   end
 
-  get 'next_splash', controller: "pages", action: 'splash'
+  post 'contact', controller: 'pages', action: 'info'
 
-  get 'original.html', controller: "original_pages", action: "index"
-  get 'original/index.html', controller: "original_pages", action: "index"
-  get 'original/no-sidebar.html', controller: "original_pages", action: "no_sidebar"
-  get 'original/left-sidebar.html', controller: "original_pages", action: "left_sidebar"
-  get 'original/right-sidebar.html', controller: "original_pages", action: "right_sidebar"
+  get 'next_splash', controller: "pages", action: 'splash'
 end

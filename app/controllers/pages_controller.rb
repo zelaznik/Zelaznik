@@ -21,6 +21,9 @@ class PagesController < ApplicationController
   def contact
   end
 
+  def info
+  end
+
   def index
     render :home
   end
