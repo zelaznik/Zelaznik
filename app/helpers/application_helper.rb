@@ -8,5 +8,4 @@ module ApplicationHelper
 
     html_escaped.join(delimiter).html_safe
   end
-
 end

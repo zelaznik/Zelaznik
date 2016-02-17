@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :download_user
 
+  include ApplicationHelper
+
   def download_user
     @current_user = current_user
   end

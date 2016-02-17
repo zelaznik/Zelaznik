@@ -23,10 +23,8 @@
     </div> <!-- end .container -->
 
     <form action="?" method="POST">
+      <%= raw recaptcha_tags %>
       <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-      <div class="g-recaptcha"
-        data-sitekey="6LcbhhgTAAAAALi0PxoTYG58twjudcuN-IXz5MaS">
-      </div>
       <button class="submit">Request Contact Information</button>
     </form>
 
