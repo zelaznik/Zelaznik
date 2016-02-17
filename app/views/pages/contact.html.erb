@@ -1,3 +1,55 @@
-<%= render :layout => '/pages/main', :locals => {active: 'about'} do %>
-  <h1>CONTACT PAGE NOT IMPLEMENTED</h1>
+<%= render :layout => '/pages/main', :locals => {active: 'contact'} do %>
+
+  <div class="wrapper wrapper-style1">
+    <div class="container">
+      <div class="row">
+        <div class="12u">
+          <section id="contact-intro">
+            <header class="section-header">
+              <h2 class="section-headline">Contact Me</h2>
+            </header>
+          </section>
+        </div> <!-- end .12u -->
+      </div> <!-- end .row -->
+    </div> <!-- end .container -->
+
+    <div class="container">
+      <div class="row">
+
+        <div class="6u 12u(mobile)">
+          <ul class="contact">
+            <li>
+              <div class="container">
+                <div class="row">
+                  <div class="6u">
+                    <span class="icon fa-home"></span>
+                    <%= @current_user.address.gsub("\n", "<br>").html_safe %>
+                  </div>
+                  <div class="6u">
+                    <div class="6u 12u(mobile)">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="icon fa-envelope"></span>
+              <%= @current_user.email %>
+            </li>
+            <li>
+              <span class="icon fa-phone"></span>
+              <%= @current_user.phone %>
+            </li>
+            <li>
+              <span class="icon fa-twitter"></span>
+              @<%= @current_user.twitter %>
+            </li>
+          </ul> <!-- end .contact -->
+        </div> <!-- end .columns -->
+
+      </div> <!-- end .row -->
+    </div> <!-- end .container -->
+
+  </div> <!-- end .wrapper -->
+
 <% end %>

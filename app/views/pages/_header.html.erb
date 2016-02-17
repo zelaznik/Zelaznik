@@ -24,8 +24,9 @@
           <!-- Nav -->
           <div id="nav">
             <ul class="navbar-list">
-              <% ['Home','Blog'].each &item_maker %>
-              <% ['Resume','Portfolio'].each &item_maker %>
+              <% item_maker.call 'Home' %>
+              <% item_maker.call 'Blog', target: '_blank' %>
+              <% ['Resume','Portfolio','Contact'].each &item_maker %>
             </ul>
           </div>
 

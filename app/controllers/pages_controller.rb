@@ -19,8 +19,8 @@ class PagesController < ApplicationController
   end
 
   def contact
-    redirect_to url_for controller: 'pages', action: 'home',
-    anchor: 'contact-intro', only_path: true
+    # redirect_to url_for controller: 'pages', action: 'home',
+    # anchor: 'contact-intro', only_path: true
   end
 
   def index
