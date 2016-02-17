@@ -7,7 +7,17 @@
           <section id="contact-intro">
             <header class="section-header">
               <h2 class="section-headline">Contact Me</h2>
+
+              <p class="section-caption">
+                <span class="group">Before getting my contact information,</span>
+                <span class="group">please fill out this form verifying</span>
+                <span class="group">that you&apos;re a human being, not a bot.</span>
+              </p>
+
+
             </header>
+
+
           </section>
         </div> <!-- end .12u -->
       </div> <!-- end .row -->
@@ -15,34 +25,36 @@
 
     <div class="container">
       <div class="row">
+        <form action="?" method="POST" class="anti-spam-bot">
+          <div class="g-recaptcha"
+          data-sitekey="6LcbhhgTAAAAALi0PxoTYG58twjudcuN-IXz5MaS">
+        </div>
+      </form>
+      </div>
+
+      <div class="row">
 
         <div class="6u 12u(mobile)">
           <ul class="contact">
             <li>
-              <div class="container">
-                <div class="row">
-                  <div class="6u">
-                    <span class="icon fa-home"></span>
-                    <%= @current_user.address.gsub("\n", "<br>").html_safe %>
-                  </div>
-                  <div class="6u">
-                    <div class="6u 12u(mobile)">
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <span class="icon fa-home"></span>
+              Please Verify That You&apos;re Not A Robot
+              <% @current_user.address.gsub("\n", "<br>").html_safe %>
             </li>
             <li>
               <span class="icon fa-envelope"></span>
-              <%= @current_user.email %>
+              Please Verify That You&apos;re Not A Robot
+              <% @current_user.email %>
             </li>
             <li>
               <span class="icon fa-phone"></span>
-              <%= @current_user.phone %>
+              Please Verify That You&apos;re Not A Robot
+              <% @current_user.phone %>
             </li>
             <li>
               <span class="icon fa-twitter"></span>
-              @<%= @current_user.twitter %>
+              Please Verify That You&apos;re Not A Robot
+              <% "@#{@current_user.twitter}" %>
             </li>
           </ul> <!-- end .contact -->
         </div> <!-- end .columns -->

@@ -297,3 +297,9 @@ section {
 h2.section-heading {
   margin-bottom: 0.25em;
 }
+
+form.anti-spam-bot {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
