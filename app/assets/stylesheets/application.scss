@@ -255,6 +255,12 @@ section {
   display: inline-block;
 }
 
+span.email {
+  top: 50%;
+  position: relative;
+  transform: translateY(-50%);
+}
+
 #banner-intro {
   padding-left: 30px;
   padding-right: 30px;
@@ -302,4 +308,21 @@ form.anti-spam-bot {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+}
+
+ul.contact li:first-child span {
+  transform: translateY(-50%);
+  left: 5px;
+  top: 50%;
+}
+
+ul.contact li span {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+ul.contact li div.data {
+  top: 50%;
 }

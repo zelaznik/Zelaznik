@@ -25,18 +25,18 @@ class PagesController < ApplicationController
   end
 
   def info
-    # response = Recaptcha.verify(params)
-    # status = verify_google_recaptcha(
-    #   Rails.application.secrets.recaptcha_private_key,
-    #   params["g-recaptcha-response"],
-    # )
-    # respond_to do |format|
-    #   if status
-    #     format.html { redirect_to @user, notice: 'User was successfully created.' }
-    #   else
-    #     format.html { render :new }
-    #   end
-    # end
+    status = verify_google_recaptcha(
+      Rails.application.secrets.recaptcha_private_key,
+      params["g-recaptcha-response"],
+    )
+
+    respond_to do |format|
+      if status
+        format.html { redirect_to @user, notice: 'User was successfully created.' }
+      else
+        format.html { render :new }
+      end
+    end
   end
 
   def index

@@ -14,7 +14,6 @@
 	<!-- Main Wrapper -->
 	<div id="main-wrapper">
 		<div id="main" class="container">
-			<h1>@<%= "#{Rails.application.secrets.recaptcha_public_key}" %></h1>
 			<%= render 'skills', current_user: @current_user %>
 			<%= render 'about', current_user: @current_user %>
 		</div> <!-- End #main.container -->
