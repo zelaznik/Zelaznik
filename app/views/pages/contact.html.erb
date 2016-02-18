@@ -24,7 +24,7 @@
 
     <% begin %>
       <% html = recaptcha_tags %>
-    <% except Exception => e %>
+    <% rescue Exception => e %>
       <div style="{background: #ffcccc;}">
         <h1 style><%= "#{e.class}: #{e}" %></h1>
       </div>
