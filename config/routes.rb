@@ -8,6 +8,5 @@ Rails.application.routes.draw do
   end
 
   post 'contact', controller: 'pages', action: 'info'
-
   get 'next_splash', controller: "pages", action: 'splash'
 end
