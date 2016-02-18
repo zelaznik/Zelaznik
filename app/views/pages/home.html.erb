@@ -1,6 +1,7 @@
 <div id="page-wrapper">
 	<%= render 'header', active: 'home' %>
 
+
 	<div class="banner-wrapper">
 		<div id="banner">
 			<%= render 'banner', current_user: @current_user %>
@@ -13,6 +14,7 @@
 	<!-- Main Wrapper -->
 	<div id="main-wrapper">
 		<div id="main" class="container">
+			<h1><%= "#{Rails.application.secrets.recaptcha_public_key}" %></h1>
 			<%= render 'skills', current_user: @current_user %>
 			<%= render 'about', current_user: @current_user %>
 		</div> <!-- End #main.container -->
