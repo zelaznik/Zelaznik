@@ -22,7 +22,7 @@ gem "twitter-bootstrap-rails"
 gem 'cloudinary'
 
 # Captcha
-gem 'simple_captcha', git: 'git://github.com/vittorius/simple-captcha.git'
+gem "recaptcha", :require => "recaptcha/rails"
 gem 'protected_attributes'
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -40,8 +40,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'feedjira'
-
-gem "recaptcha", require: "recaptcha/rails"
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'

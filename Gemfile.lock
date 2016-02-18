@@ -1,9 +1,3 @@
-GIT
-  remote: git://github.com/vittorius/simple-captcha.git
-  revision: ac3cd50cee67587fd693af0575845530cc636ae9
-  specs:
-    simple_captcha (0.1.5)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -243,7 +237,6 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   seed_dump
-  simple_captcha!
   spring
   turbolinks
   twitter-bootstrap-rails
