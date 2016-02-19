@@ -2,9 +2,18 @@ User.all.each do |user|
   user.destroy!
 end
 
-steve = User.create!(
-  {id: 1, first_name: "Steve", last_name: "Zelaznik", email: "steve.zelaznik@gmail.com", address: "219 6th St #2A\nSan Francisco, CA 94103", phone: "(410) 375-8414", resume: nil, twitter: "stevezelaznik", blog: "http://zelaznik.tumblr.com", github: "http://www.github.com/zelaznik", linkedin: "http://www.linkedin.com/in/zelaznik"}
-)
+steve = User.create!({
+
+  id: 1, first_name: "Steve", last_name: "Zelaznik", email: "steve.zelaznik@gmail.com",
+  address: "219 6th St #2A\nSan Francisco, CA 94103",
+  phone: "(410) 375-8414", resume: nil, twitter: "stevezelaznik",
+
+  blog: "http://zelaznik.tumblr.com",
+  github: "http://www.github.com/zelaznik",
+  linkedin: "http://www.linkedin.com/in/zelaznik",
+  stack_overflow: "http://careers.stackoverflow.com/zelaznik"
+
+})
 
 Skill.create!([
   {user: steve, name: 'Python', image_url: 'python.jpg'},
