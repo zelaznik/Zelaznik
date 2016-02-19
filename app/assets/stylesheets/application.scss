@@ -238,6 +238,10 @@ ul.banner-list {
 }
 
 ul.contact {
+  a {
+    color: inherit;
+  }
+
   > li {
     font-weight: bold;
   }
