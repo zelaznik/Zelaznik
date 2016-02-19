@@ -1,6 +1,6 @@
 
 class PagesController < ApplicationController
-  include PagesHelper
+  include RecaptchaHelper
 
   def home
   end
@@ -25,18 +25,19 @@ class PagesController < ApplicationController
   end
 
   def info
-    status = verify_google_recaptcha(
-      Rails.application.secrets.recaptcha_private_key,
-      params["g-recaptcha-response"],
+    response = verify_google_recaptcha(
+      Recaptcha.configuration.private_key,
+      params["g-recaptcha-response"]
     )
-
     respond_to do |format|
-      if status
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
-      else
-        format.html { render :new }
+      format.html do
+        @recaptcha_success = response["success"]
+        render :contact
       end
     end
+  end
+
+  def demo
   end
 
   def index

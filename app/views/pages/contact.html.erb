@@ -36,12 +36,16 @@
             <li>
               <span class="email icon fa-envelope"></span>
               <div class="container">
-                <form action="?" method="POST">
-                  <%= raw recaptcha_tags %>
-                  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-                </form>
+                <% if @recaptcha_success %>
+                  <%= @current_user.email %>
+                <% else %>
+                  <form action="?" method="POST">
+                    <%= raw recaptcha_tags %>
+                    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+                    <button type='submit'>Ask For Email Address</button>
+                  </form>
+                <% end %>
               </div>
-              <% @current_user.email %>
             </li>
             <li>
               <span class="icon fa-phone"></span>
