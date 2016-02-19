@@ -1,7 +1,9 @@
 require 'net/https'
 
 module RecaptchaHelper
-  def verify_google_recaptcha(secret_key, response)
+  def verify_google_recaptcha
+    secret_key = Recaptcha.configuration.private_key
+    response = params["g-recaptcha-response"]
     base_url = "https://www.google.com/recaptcha/api/siteverify"
     path = "#{base_url}?secret=#{secret_key}&response=#{response}"
 

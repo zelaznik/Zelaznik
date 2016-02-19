@@ -25,10 +25,8 @@ class PagesController < ApplicationController
   end
 
   def info
-    response = verify_google_recaptcha(
-      Recaptcha.configuration.private_key,
-      params["g-recaptcha-response"]
-    )
+    response = verify_google_recaptcha
+
     respond_to do |format|
       format.html do
         @recaptcha_success = response["success"]
