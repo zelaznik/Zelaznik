@@ -1,0 +1,27 @@
+<ul class="contact">
+  <li style="display: none"></li>
+  <li>
+    <span class="icon fa-home"></span>
+    <div class="data">
+      <%= @current_user.address.gsub("\n", "<br>").html_safe %>
+    </div>
+  </li>
+  <li>
+    <span class="email icon fa-envelope"></span>
+    <div class="container">
+      <% if @recaptcha_success %>
+        <%= @current_user.email %>
+      <% else %>
+        <form action="?" method="POST">
+          <%= raw recaptcha_tags %>
+          <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+          <button type='submit'>Ask For Email Address</button>
+        </form>
+      <% end %>
+    </div>
+  </li>
+  <li>
+    <span class="icon fa-phone"></span>
+    <%= @current_user.phone %>
+  </li>
+</ul> <!-- end .contact -->

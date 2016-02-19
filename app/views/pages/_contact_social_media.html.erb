@@ -1,0 +1,16 @@
+<ul class="contact">
+  <li style="display: none"></li>
+
+  <li>
+    <span class="email icon fa-github"></span>
+    <%= link_to 'GitHub', url: @current_user.github, target: '_blank' %>
+  </li>
+  <li>
+    <span class="email icon fa-linkedin"></span>
+    <%= link_to 'LinkedIn', url: @current_user.linkedin, target: '_blank' %>
+  </li>
+  <li>
+    <span class="email icon fa-stack-overflow"></span>
+    <%= link_to 'Stack Overflow', url: @current_user.stack_overflow, target: '_blank' %>
+  </li>
+</ul> <!-- end .contact -->
