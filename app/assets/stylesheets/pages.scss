@@ -35,3 +35,17 @@ body.home {
     }
   }
 }
+
+#google_map_container {
+  height: 440px;
+  width: 700px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#google_map {
+  overflow: hidden;
+  height: 440px;
+  width: 700px;
+}

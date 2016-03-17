@@ -1,3 +1,17 @@
+<script type='text/javascript'>
+  function initMap() {
+    var $root = document.getElementById('google_map'),
+        zoom = 15, lat = 37.779628, lng = -122.40663599999999;
+
+    var map = new google.maps.Map($root, {
+      zoom: zoom, center: new google.maps.LatLng(lat, lng)
+    });
+    var marker = new google.maps.Marker({
+      map: map, position: new google.maps.LatLng(lat, lng)
+    });
+  }
+</script>
+
 <%= render :layout => '/pages/main', :locals => {active: 'contact'} do %>
 
   <div class="wrapper wrapper-style1">
@@ -8,6 +22,12 @@
             <header class="section-header">
               <h2 class="section-headline">Contact Me</h2>
             </header>
+            <div id="google_map_container">
+              <div id='google_map'></div>
+            </div>
+            <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer>
+            </script>
+
           </section>
         </div> <!-- end .12u -->
       </div> <!-- end .row -->
@@ -26,5 +46,7 @@
     </div> <!-- end .container -->
 
   </div> <!-- end .wrapper -->
+
+
 
 <% end %>
