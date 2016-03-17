@@ -1,13 +1,43 @@
 <script type='text/javascript'>
-  function initMap() {
-    var $root = document.getElementById('google_map'),
-        zoom = 15, lat = 37.779628, lng = -122.40663599999999;
+  function onClickOutside($root_path, callback) {
+    $(document).on('click', function(e) {
+      if ( $(e.target).closest($root_path).length > 0 )
+          return;
+      if ( $(e.target).is($root_path) )
+          return;
 
-    var map = new google.maps.Map($root, {
-      zoom: zoom, center: new google.maps.LatLng(lat, lng)
+      callback();
+    });
+  }
+
+  function initMap() {
+    var root_path = 'google_map', zoom = 15,
+        lat = 37.779628, lng = -122.40663599999999;
+
+    var root = document.getElementById(root_path);
+    var $root_path = '#' + root_path;
+    var $root = $($root_path);
+
+    var map = new google.maps.Map(root, {
+      zoom: zoom,
+      center: new google.maps.LatLng(lat, lng),
+      draggable: true,
+      scrollwheel: false,
+      zoomControl: true
     });
     var marker = new google.maps.Marker({
       map: map, position: new google.maps.LatLng(lat, lng)
+    });
+
+    $root.on('click', function() {
+      map.setOptions({
+        scrollwheel: true
+      });
+    });
+    onClickOutside($root_path, function() {
+      map.setOptions({
+        scrollwheel: false
+      })
     });
   }
 </script>
@@ -46,7 +76,5 @@
     </div> <!-- end .container -->
 
   </div> <!-- end .wrapper -->
-
-
 
 <% end %>
