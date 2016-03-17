@@ -28,7 +28,7 @@
 										</header>
 
 											<div class="row">
-												<% @current_user.projects.limit(4).each do |project| %>
+												<% @current_user.projects.each do |project| %>
 													<%= render 'project', project: project %>
 												<% end %>
 											</div> <!-- end .row -->
