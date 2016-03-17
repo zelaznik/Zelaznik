@@ -239,6 +239,16 @@
 @media screen and (max-width: 736px) {
   @include universal();
 
+  #google_map_container {
+    width: 320px;
+    height: 260px;
+  }
+
+  #google_map {
+    width: 320px;
+    height: 260px;
+  }
+
   .mobile-line-break {
     display: block;
     clear: both;
