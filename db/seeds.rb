@@ -56,7 +56,7 @@ ActiveRecord::Base.transaction do
   Splash.create!([
     {user: steve, rank: 0, p: "Full-stack developer with a passion for", h2: "Ruby On Rails"},
     {user: steve, rank: 1, p: "Five years writing financial software in", h2: "Python / PostgreSQL"},
-    {user: steve, rank: 2, p: "Public radio junkie, swing dancer, the hobbies go on", h2: "Learn More"}
+    {user: steve, rank: 2, p: "Public radio junkie, musician, the hobbies go on", h2: "Learn More"}
   ])
 
   Project.create!([
