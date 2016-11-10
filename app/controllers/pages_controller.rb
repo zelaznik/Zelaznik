@@ -18,6 +18,12 @@ class PagesController < ApplicationController
     file_name: 'steve_zelaznik_cv.pdf'
   end
 
+  def third_party_scenarios
+    send_file 'public/assets/data/third_party_scenarios.xlsx',
+    type: "application/xlsx", :x_sendfile=>true,
+    file_name: 'third_party_scenarios.xlsx'
+  end
+
   def portfolio
   end
 

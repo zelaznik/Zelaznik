@@ -9,4 +9,6 @@ Rails.application.routes.draw do
 
   post 'contact', controller: 'pages', action: 'info'
   get 'next_splash', controller: "pages", action: 'splash'
+
+  get 'third_party_scenarios.xlsx', to: 'pages#third_party_scenarios'
 end
